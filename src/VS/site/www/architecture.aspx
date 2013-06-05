@@ -16,26 +16,14 @@
 <tr valign=top><td align="left">&nbsp;</td></tr>
 <tr valign=top><td align="left">Open Source (<a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2.0</a>) and Cloud ready Image (<a href="http://aws.amazon.com">Amazon EC2</a>) available</td></tr>
 
-<tr valign=top><td align="left">&nbsp;</td></tr>
-<tr valign=top><td align="left">Mobile development client libraries: Android, iOS, Windows</td></tr>
-<tr valign=top><td align="left">Support for PhoneGap, Appcelerator, Serena and other frameworks</td></tr>
-
-<tr valign=top><td align="left">&nbsp;</td></tr>
-<tr valign=top><td align="left">SOAP Interface, XSLT mapper, asynchronous connection to Enterprise services</td></tr>
-<tr valign=top><td align="left">Web based Admin Console (Microsoft ASP.NET)</td></tr>
-
-<tr valign=top><td align="left">&nbsp;</td></tr>
-<tr valign=top><td align="left">Protocols: BSON (binary JSON) over UDP, SOAP, XSLT, OAuth, NoSQL</td></tr>
-
-<tr valign=top><td align="left">&nbsp;</td></tr>
-<tr valign=top><td align="left">Open, Secure, Reliable and Scalable</td></tr>
+<tr valign=top><td align="left"><img src="img/mobileAPI_v0.png" halign="middle"   width="700" /></td></tr>
 
 <tr valign=top><td align="left">&nbsp;</td></tr>
 <tr valign=top><td align="left">Builds on: <a href="http://redis.io/">Redis</a> - <a href="http://www.mongodb.org/">MongoDB</a> - <a href="http://qpid.apache.org/">Qpid</a> - <a href="http://nginx.org/">Nginx</a> - <a href="http://www.linux.org/">Linux</a> - <a href="http://www.android.com/">Android</a> - <a href="http://www.apple.com/ios/">iOS</a> - <a href="http://www.microsoft.com">Windows</a></td></tr>
 
 <tr valign=top><td align="left">&nbsp;</td></tr>
 
-</table>
+
 </center>
 </asp:Content>
 

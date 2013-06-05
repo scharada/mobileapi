@@ -1,0 +1,14 @@
+body
+{
+	padding:50px;
+	font-family:"Verdana";
+	font-size:13px;
+	color:#006699;
+}
+
+table{
+	padding:10px;
+	border-color:#3399FF;
+	border-width:2px;
+	border-style:dotted
+}

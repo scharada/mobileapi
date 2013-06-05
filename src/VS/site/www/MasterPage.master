@@ -4,11 +4,14 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<title>MobileAPI.org | Home</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body bgcolor="#999999">
     <form id="form1" runat="server">
     <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
@@ -16,5 +19,9 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
+     <center>
+<table valign=top width="729"  bgcolor=white hspace=50>
+    <tr valign=top><td><a href="Default.aspx">Home</a>&nbsp;&nbsp;&nbsp;<a href="architecture.aspx">Architecture</a>&nbsp;&nbsp;&nbsp;<a href="mailto:info@mobileapi.org">info@mobileapi.org</a></td></tr>
+</table>
 </body>
 </html>
