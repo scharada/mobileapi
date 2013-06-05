@@ -1,0 +1,100 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.mobileapi.client.windows.example", "client\org.mobileapi.client.windows.example\org.mobileapi.client.windows.example.csproj", "{E0310FAE-A214-4E05-B17B-B2641617396C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.mobileapi.client.windows.lib", "client\org.mobileapi.client.windows.lib\org.mobileapi.client.windows.lib.csproj", "{CB6E6FB3-42F0-4CAB-B393-BBBB4BA7891E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.mobileapi.server.windows.api", "server\org.mobileapi.server.windows.api\org.mobileapi.server.windows.api.csproj", "{0594A499-9497-4620-BE2E-54DE5E3C89E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.mobileapi.server.windows.broker", "server\org.mobileapi.server.windows.broker\org.mobileapi.server.windows.broker.csproj", "{752D22BA-5411-4A30-A497-2FD8D5DAE9CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.mobileapi.server.windows.broker.console", "server\org.mobileapi.server.windows.broker.console\org.mobileapi.server.windows.broker.console.csproj", "{DA016E74-6C7F-4E71-B068-606FCC1EB8A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.mobileapi.server.windows.broker.service", "server\org.mobileapi.server.windows.broker.service\org.mobileapi.server.windows.broker.service.csproj", "{611694E9-413C-43CE-B77D-CFCE7E2062EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.mobileapi.server.windows.gateway", "server\org.mobileapi.server.windows.gateway\org.mobileapi.server.windows.gateway.csproj", "{3FB3CF04-8EB5-4FE3-B6C0-DB82E8C1E2C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.mobileapi.server.windows.gateway.console", "server\org.mobileapi.server.windows.gateway.console\org.mobileapi.server.windows.gateway.console.csproj", "{18087D25-B690-430D-B352-ACAE134AA627}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.mobileapi.server.windows.gateway.service", "server\org.mobileapi.server.windows.gateway.service\org.mobileapi.server.windows.gateway.service.csproj", "{4F821486-0BB8-4F88-9D05-81920C54F0CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.mobileapi.server.windows.monitor", "server\org.mobileapi.server.windows.monitor\org.mobileapi.server.windows.monitor.csproj", "{9D163462-DC4A-4BA4-9A8D-ACB23A4FCC2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.mobileapi.server.windows.monitor.console", "server\org.mobileapi.server.windows.monitor.console\org.mobileapi.server.windows.monitor.console.csproj", "{7FEAFDB6-63DE-4FBB-9508-52505099B4DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.mobileapi.server.windows.monitor.service", "server\org.mobileapi.server.windows.monitor.service\org.mobileapi.server.windows.monitor.service.csproj", "{F223100C-65B8-4ABA-A7EB-3DAF2E602825}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.mobileapi.server.windows.portal", "server\org.mobileapi.server.windows.portal\org.mobileapi.server.windows.portal.csproj", "{42502FE3-6AF3-4E35-86E2-D904D1309339}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.mobileapi.server.windows.shared", "server\org.mobileapi.server.windows.shared\org.mobileapi.server.windows.shared.csproj", "{76C0171F-36D0-4D58-80AC-F3C83C7B063B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CB6E6FB3-42F0-4CAB-B393-BBBB4BA7891E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB6E6FB3-42F0-4CAB-B393-BBBB4BA7891E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB6E6FB3-42F0-4CAB-B393-BBBB4BA7891E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB6E6FB3-42F0-4CAB-B393-BBBB4BA7891E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0594A499-9497-4620-BE2E-54DE5E3C89E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0594A499-9497-4620-BE2E-54DE5E3C89E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0594A499-9497-4620-BE2E-54DE5E3C89E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0594A499-9497-4620-BE2E-54DE5E3C89E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{752D22BA-5411-4A30-A497-2FD8D5DAE9CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{752D22BA-5411-4A30-A497-2FD8D5DAE9CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{752D22BA-5411-4A30-A497-2FD8D5DAE9CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{752D22BA-5411-4A30-A497-2FD8D5DAE9CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA016E74-6C7F-4E71-B068-606FCC1EB8A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA016E74-6C7F-4E71-B068-606FCC1EB8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA016E74-6C7F-4E71-B068-606FCC1EB8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA016E74-6C7F-4E71-B068-606FCC1EB8A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{611694E9-413C-43CE-B77D-CFCE7E2062EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{611694E9-413C-43CE-B77D-CFCE7E2062EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{611694E9-413C-43CE-B77D-CFCE7E2062EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{611694E9-413C-43CE-B77D-CFCE7E2062EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FB3CF04-8EB5-4FE3-B6C0-DB82E8C1E2C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FB3CF04-8EB5-4FE3-B6C0-DB82E8C1E2C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FB3CF04-8EB5-4FE3-B6C0-DB82E8C1E2C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FB3CF04-8EB5-4FE3-B6C0-DB82E8C1E2C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18087D25-B690-430D-B352-ACAE134AA627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18087D25-B690-430D-B352-ACAE134AA627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18087D25-B690-430D-B352-ACAE134AA627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18087D25-B690-430D-B352-ACAE134AA627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F821486-0BB8-4F88-9D05-81920C54F0CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F821486-0BB8-4F88-9D05-81920C54F0CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F821486-0BB8-4F88-9D05-81920C54F0CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F821486-0BB8-4F88-9D05-81920C54F0CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D163462-DC4A-4BA4-9A8D-ACB23A4FCC2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D163462-DC4A-4BA4-9A8D-ACB23A4FCC2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D163462-DC4A-4BA4-9A8D-ACB23A4FCC2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D163462-DC4A-4BA4-9A8D-ACB23A4FCC2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FEAFDB6-63DE-4FBB-9508-52505099B4DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FEAFDB6-63DE-4FBB-9508-52505099B4DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FEAFDB6-63DE-4FBB-9508-52505099B4DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FEAFDB6-63DE-4FBB-9508-52505099B4DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F223100C-65B8-4ABA-A7EB-3DAF2E602825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F223100C-65B8-4ABA-A7EB-3DAF2E602825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F223100C-65B8-4ABA-A7EB-3DAF2E602825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F223100C-65B8-4ABA-A7EB-3DAF2E602825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42502FE3-6AF3-4E35-86E2-D904D1309339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42502FE3-6AF3-4E35-86E2-D904D1309339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42502FE3-6AF3-4E35-86E2-D904D1309339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42502FE3-6AF3-4E35-86E2-D904D1309339}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76C0171F-36D0-4D58-80AC-F3C83C7B063B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76C0171F-36D0-4D58-80AC-F3C83C7B063B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76C0171F-36D0-4D58-80AC-F3C83C7B063B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76C0171F-36D0-4D58-80AC-F3C83C7B063B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
