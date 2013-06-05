@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:org.mobileapi.client.ios.lib/org.mobileapi.client.ios.lib.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:org.mobileapi.client.ios.sample/org.mobileapi.client.ios.sample.xcodeproj">
+   </FileRef>
+</Workspace>

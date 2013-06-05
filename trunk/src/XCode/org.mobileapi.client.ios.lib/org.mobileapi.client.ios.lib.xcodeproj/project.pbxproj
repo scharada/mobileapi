@@ -1,0 +1,247 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D646A450175F4ED900842104 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D646A44F175F4ED900842104 /* Foundation.framework */; };
+		D646A455175F4ED900842104 /* org_mobileapi_client_ios_lib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D646A454175F4ED900842104 /* org_mobileapi_client_ios_lib.h */; };
+		D646A457175F4ED900842104 /* org_mobileapi_client_ios_lib.m in Sources */ = {isa = PBXBuildFile; fileRef = D646A456175F4ED900842104 /* org_mobileapi_client_ios_lib.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D646A44A175F4ED900842104 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				D646A455175F4ED900842104 /* org_mobileapi_client_ios_lib.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D646A44C175F4ED900842104 /* liborg.mobileapi.client.ios.lib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liborg.mobileapi.client.ios.lib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D646A44F175F4ED900842104 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D646A453175F4ED900842104 /* org.mobileapi.client.ios.lib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "org.mobileapi.client.ios.lib-Prefix.pch"; sourceTree = "<group>"; };
+		D646A454175F4ED900842104 /* org_mobileapi_client_ios_lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = org_mobileapi_client_ios_lib.h; sourceTree = "<group>"; };
+		D646A456175F4ED900842104 /* org_mobileapi_client_ios_lib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = org_mobileapi_client_ios_lib.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D646A449175F4ED900842104 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D646A450175F4ED900842104 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D646A443175F4ED900842104 = {
+			isa = PBXGroup;
+			children = (
+				D646A451175F4ED900842104 /* org.mobileapi.client.ios.lib */,
+				D646A44E175F4ED900842104 /* Frameworks */,
+				D646A44D175F4ED900842104 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D646A44D175F4ED900842104 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D646A44C175F4ED900842104 /* liborg.mobileapi.client.ios.lib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D646A44E175F4ED900842104 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D646A44F175F4ED900842104 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D646A451175F4ED900842104 /* org.mobileapi.client.ios.lib */ = {
+			isa = PBXGroup;
+			children = (
+				D646A454175F4ED900842104 /* org_mobileapi_client_ios_lib.h */,
+				D646A456175F4ED900842104 /* org_mobileapi_client_ios_lib.m */,
+				D646A452175F4ED900842104 /* Supporting Files */,
+			);
+			path = org.mobileapi.client.ios.lib;
+			sourceTree = "<group>";
+		};
+		D646A452175F4ED900842104 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D646A453175F4ED900842104 /* org.mobileapi.client.ios.lib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D646A44B175F4ED900842104 /* org.mobileapi.client.ios.lib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D646A45A175F4ED900842104 /* Build configuration list for PBXNativeTarget "org.mobileapi.client.ios.lib" */;
+			buildPhases = (
+				D646A448175F4ED900842104 /* Sources */,
+				D646A449175F4ED900842104 /* Frameworks */,
+				D646A44A175F4ED900842104 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = org.mobileapi.client.ios.lib;
+			productName = org.mobileapi.client.ios.lib;
+			productReference = D646A44C175F4ED900842104 /* liborg.mobileapi.client.ios.lib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D646A444175F4ED900842104 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = MobileAPI;
+			};
+			buildConfigurationList = D646A447175F4ED900842104 /* Build configuration list for PBXProject "org.mobileapi.client.ios.lib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D646A443175F4ED900842104;
+			productRefGroup = D646A44D175F4ED900842104 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D646A44B175F4ED900842104 /* org.mobileapi.client.ios.lib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D646A448175F4ED900842104 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D646A457175F4ED900842104 /* org_mobileapi_client_ios_lib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D646A458175F4ED900842104 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D646A459175F4ED900842104 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D646A45B175F4ED900842104 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/org_mobileapi_client_ios_lib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "org.mobileapi.client.ios.lib/org.mobileapi.client.ios.lib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D646A45C175F4ED900842104 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/org_mobileapi_client_ios_lib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "org.mobileapi.client.ios.lib/org.mobileapi.client.ios.lib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D646A447175F4ED900842104 /* Build configuration list for PBXProject "org.mobileapi.client.ios.lib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D646A458175F4ED900842104 /* Debug */,
+				D646A459175F4ED900842104 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D646A45A175F4ED900842104 /* Build configuration list for PBXNativeTarget "org.mobileapi.client.ios.lib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D646A45B175F4ED900842104 /* Debug */,
+				D646A45C175F4ED900842104 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D646A444175F4ED900842104 /* Project object */;
+}

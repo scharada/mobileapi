@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.mobileapi.client.windows.lib", "org.mobileapi.client.windows.lib\org.mobileapi.client.windows.lib.csproj", "{CB6E6FB3-42F0-4CAB-B393-BBBB4BA7891E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "org.mobileapi.client.windows.example", "org.mobileapi.client.windows.example\org.mobileapi.client.windows.example.csproj", "{E0310FAE-A214-4E05-B17B-B2641617396C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB6E6FB3-42F0-4CAB-B393-BBBB4BA7891E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB6E6FB3-42F0-4CAB-B393-BBBB4BA7891E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB6E6FB3-42F0-4CAB-B393-BBBB4BA7891E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{CB6E6FB3-42F0-4CAB-B393-BBBB4BA7891E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CB6E6FB3-42F0-4CAB-B393-BBBB4BA7891E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CB6E6FB3-42F0-4CAB-B393-BBBB4BA7891E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB6E6FB3-42F0-4CAB-B393-BBBB4BA7891E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB6E6FB3-42F0-4CAB-B393-BBBB4BA7891E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{CB6E6FB3-42F0-4CAB-B393-BBBB4BA7891E}.Release|x64.ActiveCfg = Release|Any CPU
+		{CB6E6FB3-42F0-4CAB-B393-BBBB4BA7891E}.Release|x86.ActiveCfg = Release|Any CPU
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Release|ARM.ActiveCfg = Release|Any CPU
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Release|x64.ActiveCfg = Release|Any CPU
+		{E0310FAE-A214-4E05-B17B-B2641617396C}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
