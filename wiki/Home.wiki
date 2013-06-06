@@ -29,6 +29,8 @@ More coming soon...
 http://www.w3.org/XML/EXI/
 http://exificient.sourceforge.net/
 
+https://npmjs.org/package/nools
+
 == FAQ ==
 Why UDP? TCP/IP provides retries at the protocol level, but timings configured originated in the fixed line networks, which does not perform well over the air. By taking control of ACK/NACK and retries on a higher level better performance can be achieved. The sporadic disconnected nature (ups, we are in a tunnel) of mobile networks like (GPRS, 3G, 4G) need strong support for message queues, which standard web server using HTTP/REST do not provide.
 
