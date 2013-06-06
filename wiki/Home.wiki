@@ -41,3 +41,6 @@ API? As a developer, how do you talk to your mobile application? How do you conn
 - build a mobile App and use REST to pull down data. Do retries pro grammatically.
 
 - If you need to push data, if you need notification to talk to your application even if not running, if you need guaranteed messaging or if you have to upload constant streams of data (GPS Locations while moving for example) use a framework like MobileAPI.org.
+
+Use case examples?
+Work force, field worker, job scheduling, cloud based productivity tools, taxis and private hire, news reader prepares headlines over night, social apps, chat, on-line games, applications with high data volume
