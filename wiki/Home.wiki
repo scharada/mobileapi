@@ -5,22 +5,25 @@
 
 Goals: Secure, Reliable, Scalable, Open
 
-Standards: XML, XSLT, EXI, BSON
+= Standards (Protocols) =
+UDP, XML, XSLT, EXI, BSON, NoSQL
 
-Server:
-OS: Linux, Windows 
-Projects: Nginx, Redis, MongoDB, Qpid
+= Server =
+OS: Linux, Windows
 
-Clients: Android, iOS, Windows Mobile, 
+= Projects =  
+Nginx, Redis, MongoDB, Qpid
 
-Languages: Java, C#, C++, C
+= Clients =
+Android, iOS, Windows Mobile
 
+= Languages =
+Java, C#, C++, C
 
 = Details =
 Incubation :5.6.2013
-
+More coming soon...
 
 = Links of Interest =
-
 http://www.w3.org/XML/EXI/
 http://exificient.sourceforge.net/
