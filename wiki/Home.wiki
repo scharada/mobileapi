@@ -1,9 +1,10 @@
-#summary MobileAPI Unified Notification and Messaging Gateway for mobile devices
+#summary MobileAPI Unified Notification and Guaranteed Messaging Gateway for mobile devices. Enterprise grade SOAP connector. Rapid Development Client libraries.
 #labels Home
 
-= MobileAPI =
+== MobileAPI ==
 
-Goals: Secure, Reliable, Scalable, Open
+= Goals =
+Secure, Reliable, Scalable, Open
 
 = Standards (Protocols) =
 UDP, XML, XSLT, EXI, BSON, NoSQL
