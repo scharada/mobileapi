@@ -1,30 +1,30 @@
 #summary MobileAPI Unified Notification and Guaranteed Messaging Gateway for mobile devices. Enterprise grade SOAP connector. Rapid Development Client libraries.
 #labels Home
 
-== MobileAPI ==
+= MobileAPI =
 
-= Goals =
+== Goals ===
 Secure, Reliable, Scalable, Open
 
-= Standards (Protocols) =
+== Standards (Protocols) ==
 UDP, XML, XSLT, EXI, BSON, NoSQL
 
-= Server =
+== Server ==
 OS: Linux, Windows
 
-= Projects =  
+== Projects ==
 Nginx, Redis, MongoDB, Qpid
 
-= Clients =
+== Clients ==
 Android, iOS, Windows Mobile
 
-= Languages =
+== Languages ==
 Java, C#, C++, C
 
-= Details =
+== Details ==
 Incubation :5.6.2013
 More coming soon...
 
-= Links of Interest =
+== Links of Interest ==
 http://www.w3.org/XML/EXI/
 http://exificient.sourceforge.net/
