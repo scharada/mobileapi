@@ -1,16 +1,26 @@
-#summary One-sentence summary of this page.
+#summary MobileAPI Unified Notification and Messaging Gateway for mobile devices
 #labels Home
 
 = MobileAPI =
 
-Add your content here.
+Goals: Secure, Reliable, Scalable, Open
+
+Standards: XML, XSLT, EXI, BSON
+
+Server:
+OS: Linux, Windows 
+Projects: Nginx, Redis, MongoDB, Qpid
+
+Clients: Android, iOS, Windows Mobile, 
+
+Languages: Java, C#, C++, C
 
 
 = Details =
+Incubation :5.6.2013
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+
+= Links of Interest =
 
 http://www.w3.org/XML/EXI/
+http://exificient.sourceforge.net/
