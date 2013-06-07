@@ -35,16 +35,16 @@
 || 2 || AIR  || 
 || 3 || NACKED  || 
 || 4 || ACKED  || 
-|| 5 || REPORTQUEUED  || 
-|| 6 || REPORTAIR  || 
-|| 7 || REPORTNACKED  || 
-|| 8 || REPORTACKED  || 
+|| 5 || REPORT_QUEUED  || 
+|| 6 || REPORT_AIR  || 
+|| 7 || REPORT_NACKED  || 
+|| 8 || REPORT_ACKED  || 
 || 9 || LOGGED  ||
 
-||  *EnumChannelOption* 
+||  *EnumChannelOption* ||
 || 0 || UNRELIABLE || 
 || 1 || RELIABLE || 
 || 2 || REPORTED || 
-|| 3 || P2PUNRELIABLE || 
-|| 4 || P2pRELIABLE || 
-|| 5 || P2pREPORTED || 
+|| 3 || P2P_UNRELIABLE || 
+|| 4 || P2P_RELIABLE || 
+|| 5 || P2P_REPORTED || 
