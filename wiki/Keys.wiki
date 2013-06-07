@@ -28,7 +28,7 @@
 || Priority	 || prio || 
 || Passwort  ||  pwd || 
 || Receiver ||  rec || 
-|| Retries	 || retries || 
+|| Retries	 || ret || 
 || Satellites || sat || 
 || Sequence  || seq || 
 || Sender	 || sndr || 
