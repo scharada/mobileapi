@@ -2,10 +2,10 @@
 
 == Keys used in JSON and MongoDB ==
 
-|| name	key || 
+|| name	 || key || 
 || AdminID	 || adminID || 
 ApplicationID	 || appID || 
-|| Binary	bin || 
+|| Binary	 ||  bin || 
 || BodyLength	blength || 
 || Created	c || 
 || CompanyID	 || comID || 
@@ -16,7 +16,7 @@ ApplicationID	 || appID ||
 || Fix	  ||  fix || 
 || GroupID  ||  grpID || 
 || HeaderLength  || 	hlength || 
-|| Lattidude	lat || 
+|| Lattidude	 ||  lat || 
 || Longitude || long || 
 || Message || msg || 
 || MessageID || msgID || 
