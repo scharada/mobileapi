@@ -10,6 +10,8 @@
 
   * AppId = CreateApplication(companyID, email, secret);
 
-  * tmpPasswort = CreateAdmin(AppId, companyID, email, secret);
+  * tmpPasswort = CreateAppAdmin(AppId, companyID, email, secret);
 
-  * status = ChangPasswort(email, old, new)
+  * pin = inviteUser(companyID, AppId , email, secret);
+
+  * status = ChangPasswort(email, old, new);
