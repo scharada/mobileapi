@@ -1,22 +1,21 @@
 #summary Enumerations
 #labels enums
 
+|| *Title*	|| *Items*  ||   
+|| 	EnumOpcode || || 
+|| 0 || 0HELLO || 
+|| 1|| ACK || 
+|| 2|| NACK || 
+|| 3 || MSG || 
+|| 4 || GPS || 
+|| 5 || ECHO|| 
 
 
-	|| *Title*	 	|| *Items*  ||   
-	 	|| 	EnumOpcode|| || 
-		|| 0|0HELLO || 
-		|| 1|| ACK || 
-		|| 2|| NACK || 
-        || 3 || MSG || 
-	    || 4 || GPS || 
-        || 5 || ECHO|| 
-
-		|| 	EnumEncoding|| || 
-		|| 0|NONE || 
-		|| 1|| BINARY || 
-		|| 2|| BSON || 
-        || 3 || EXI || 
-	    || 4 || ASCII || 
-        || 6 || UTF-8 || 
-	    || 7 || UTF-16-8 || 
+||  EnumEncoding|| || 
+|| 0 || NONE || 
+|| 1 || BINARY || 
+|| 2 || BSON || 
+|| 3 || EXI || 
+|| 4 || ASCII || 
+|| 5 || UTF-8 || 
+|| 6 || UTF-16-8 || 
