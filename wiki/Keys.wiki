@@ -6,7 +6,7 @@
 || AdminID	 || adminID || 
 || ApplicationID	 || appID || 
 || Binary	 ||  bin || 
-|| BodyLength || blength || 
+|| BodyLength || blen || 
 || Created	 || c || 
 || CompanyID	 || comID || 
 || Checksum	 || crc || 
@@ -15,7 +15,7 @@
 || Encoding	 || enc || 
 || Fix	  ||  fix || 
 || GroupID  ||  grpID || 
-|| HeaderLength  || 	hlength || 
+|| HeaderLength  || 	hlen || 
 || Lattidude	 ||  lat || 
 || Longitude || long || 
 || Message || msg || 
