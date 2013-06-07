@@ -2,7 +2,7 @@
 #labels enums
 
 || *EnumOpcode* || 
-|| 0 || HELLO || 
+|| 0 || LOGON || 
 || 1|| ACK || 
 || 2|| NACK || 
 || 3 || MSG || 
@@ -11,6 +11,7 @@
 || 6 || LOG || 
 || 7 || UPDATETOKEN || 
 || 8 || CHANGEGATEWAY || 
+|| 9 || LOGOFF || 
 
 ||  *EnumEncoding* || 
 || 0 || NONE || 
