@@ -3,7 +3,7 @@
 == Use Cases API ==
 
  * void SetAppCallback(Guid comID, Guid appID, string url, string username, string passwort);
- * void Send(Msg msg);
+ * void Route(Msg msg);
 
  * void SetAppPermission(Guid comID, Guid appID, int appPermission);
 
