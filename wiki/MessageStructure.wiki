@@ -18,7 +18,7 @@
 || Opcode	 || 94	 || 1	 || sbyte || 	0	 || 0HELLO, 1ACK, 2MSG, 3LOG, 4TBD ||
 || Parts	 || 98 || 4 || 	int || 	1	 || number of msg parts 1 for single message ||
 || Part	 || 102	 || 4 || 	int || 	0	 || part number ||
-|| Seq	 || 106	 || 4	 || int	0 || 	seq number ||
+|| Seq	 || 106	 || 4	 || int	|| 0 || 	seq number ||
 || TTL	 || 110	 || 4 || int || 	0	 || time to live ||
 || Priority	 || 111	 ||1	 ||byte	 || 1 || 	0 LOW,1 NORMAL,2 HIGH ||
 || Enryption	 || 112 || 	1 || 	byte	 || 0 || 	0 NONE, 1 TBD ||
