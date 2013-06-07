@@ -1,8 +1,7 @@
 #summary Enumerations
 #labels enums
 
-|| *Title* || *Items*  ||   
-|| EnumOpcode || || 
+|| *EnumOpcode* || || 
 || 0 || HELLO || 
 || 1|| ACK || 
 || 2|| NACK || 
@@ -11,8 +10,7 @@
 || 5 || ECHO || 
 || 6 || LOG || 
 
-|| *Title* || *Items*  || 
-||  EnumEncoding || || 
+||  *EnumEncoding* || || 
 || 0 || NONE || 
 || 1 || BINARY || 
 || 2 || BSON || 
@@ -21,12 +19,22 @@
 || 5 || UTF-8 || 
 || 6 || UTF-16 || 
 
-|| *Title* || *Items*  || 
-||  EnumPriority || || 
+||  *EnumPriority* || || 
 || 0 || NORMAL || 
 || 1 || LOW || 
 || 2 || HIGH || 
 
-|| *Title* || *Items*  || 
-||  EnumEncryption || || 
+||  *EnumEncryption* || || 
 || 0 || NONE || 
+
+||  *EnumMsgStatus* || || 
+|| 0 || NEW  || 
+|| 1 || QUEUED  || 
+|| 2 || AIR  || 
+|| 3 || NACKED  || 
+|| 4 || ACKED  || 
+|| 5 || REPQUEUED  || 
+|| 6 || REPAIR  || 
+|| 7 || REPNACKED  || 
+|| 8 || REPACKED  || 
+|| 9 || LOGGED  ||
