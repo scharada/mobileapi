@@ -5,4 +5,4 @@
  * SetAppCallback(Guid comID, Guid appID, string url, string username, string passwort)
  * void Send(Msg msg);
  * void Callback(Msg msg);
- * void setAppPermission(Guid comID, Guid appID, int appPermission);
+ * void SetAppPermission(Guid comID, Guid appID, int appPermission);
