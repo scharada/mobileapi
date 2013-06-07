@@ -20,3 +20,13 @@
 || 4 || ASCII || 
 || 5 || UTF-8 || 
 || 6 || UTF-16 || 
+
+|| *Title* || *Items*  || 
+||  EnumPriority || || 
+|| 0 || NORMAL|| 
+|| 1 || TBD|| 
+
+
+|| *Title* || *Items*  || 
+||  EnumEncryption || || 
+|| 0 || NONE || 
