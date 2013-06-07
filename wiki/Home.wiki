@@ -1,25 +1,49 @@
-#summary MobileAPI Unified Notification and Guaranteed Messaging Gateway for mobile devices. Enterprise grade SOAP connector. Rapid Development Client libraries.
+#summary Mobile API, notification and messaging platform for mobile devices
 #labels Home
 
-= MobileAPI =
+Client libraries for rapid application development
+ * Android
+ * iOS 
+ * Windows Mobile
+ * Notifications
+ * UDP sockets
+ * Message queues
+ * Automatic Network selection
+ * Location based service GPS.
+ * binary Transport over <a href="http://www.w3.org/XML/EXI/‎">EXI</a> and <a href="http://bsonspec.org/">BSON</a>.
 
-== Goals ===
-Open, Secure, Reliable and  Scalable
+High performance push messaging gateway with guaranteed message delivery
+ * UDP 
+ * TTL, ACK, NACK, message split,retries, priority configurable per channel
+ * Rules engine based routing
 
-== Standards (Protocols) ==
-UDP, XML, XSLT, EXI, BSON, NoSQL
+Web based configuration portal
+ * <a href="oauth.net/‎">oAuth</a>, multi customer, multi admin, multi application
+ * Message transformations XSLT
+ * Graphical message mapping
+ * Routing Rules(JavaScript?)
+
+
+== Standards and Protocols ==
+UDP, XML, XSLT, EXI, BSON,  NoSQL, OAuth, HTTPS
 
 == Server ==
-OS: Linux, Windows
-
-== Projects ==
-Nginx.org, Redis.org, MongoDB.org, Qpid.org
+Linux, Windows
 
 == Clients ==
 Android, iOS, Windows Mobile
 
-== Languages ==
+== Implementation Languages ==
 Java, C#, C++, C
+
+== Platforms ==
+Nginx.org, Redis.org, MongoDB.org, Qpid.org
+
+
+==Design Priniciples== 
+Open, Secure, Reliable and Scalable
+
+According to Einstein: Everything Should Be Made as Simple as Possible, But Not Simpler
 
 == Details ==
 Incubation :5.6.2013
