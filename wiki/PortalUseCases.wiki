@@ -1,0 +1,12 @@
+Summary:
+
+Portal Use Cases Updated Today (28 minutes ago) by mathias.dietrich
+Portal Use Cases
+
+email = CreateCompany?(name, email);
+tmpPasswort, companyID = validateEmailLink(token, email);
+tmpPasswort = CreateSuperAdmin?(companyID, newAdminEmail, email, secret);
+AppId? = CreateApplication?(companyID, email, secret);
+tmpPasswort = CreateAppAdmin?(AppId?, companyID, email, secret);
+pin = InviteUser?(companyID, AppId? , email, secret);
+status = ChangPasswort?(email, old, new);
