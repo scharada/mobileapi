@@ -4,9 +4,9 @@
 
 || name	 || key || 
 || AdminID	 || adminID || 
- || ApplicationID	 || appID || 
+|| ApplicationID	 || appID || 
 || Binary	 ||  bin || 
-|| BodyLength || 	blength || 
+|| BodyLength || blength || 
 || Created	 || c || 
 || CompanyID	 || comID || 
 || Checksum	 || crc || 
