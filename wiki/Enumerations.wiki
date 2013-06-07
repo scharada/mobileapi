@@ -1,7 +1,7 @@
 #summary Enumerations
 #labels enums
 
-|| *EnumOpcode* || || 
+|| *EnumOpcode* || 
 || 0 || HELLO || 
 || 1|| ACK || 
 || 2|| NACK || 
@@ -10,7 +10,7 @@
 || 5 || ECHO || 
 || 6 || LOG || 
 
-||  *EnumEncoding* || || 
+||  *EnumEncoding* || 
 || 0 || NONE || 
 || 1 || BINARY || 
 || 2 || BSON || 
@@ -19,15 +19,17 @@
 || 5 || UTF-8 || 
 || 6 || UTF-16 || 
 
-||  *EnumPriority* || || 
+||  *EnumPriority* || 
 || 0 || NORMAL || 
 || 1 || LOW || 
 || 2 || HIGH || 
 
-||  *EnumEncryption* || || 
+||  *EnumEncryption* || 
 || 0 || NONE || 
+|| 1 || KEYS || 
+|| 2 || CERT || 
 
-||  *EnumMsgStatus* || || 
+||  *EnumMsgStatus* || 
 || 0 || NEW  || 
 || 1 || QUEUED  || 
 || 2 || AIR  || 
