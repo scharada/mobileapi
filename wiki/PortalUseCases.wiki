@@ -1,3 +1,5 @@
+#summary Portal Use Cases
+
 == Portal Use Cases ==
 
  * email = CreateCompany?(name, email);
