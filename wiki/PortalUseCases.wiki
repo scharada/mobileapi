@@ -1,12 +1,13 @@
-Summary:
+Summary: Portal Use Cases
 
-Portal Use Cases Updated Today (28 minutes ago) by mathias.dietrich
-Portal Use Cases
-
-email = CreateCompany?(name, email);
-tmpPasswort, companyID = validateEmailLink(token, email);
-tmpPasswort = CreateSuperAdmin?(companyID, newAdminEmail, email, secret);
-AppId? = CreateApplication?(companyID, email, secret);
-tmpPasswort = CreateAppAdmin?(AppId?, companyID, email, secret);
-pin = InviteUser?(companyID, AppId? , email, secret);
-status = ChangPasswort?(email, old, new);
+ * email = CreateCompany?(name, email);
+ * tmpPasswort, companyID = validateEmailLink(token, emailAdmin);
+ * tmpPasswort = CreateSuperAdmin?(companyID, newAdminEmail, emailAdmin, secret);
+ * AppId? = CreateApplication?(companyID, emailAdmin, secret);
+ * tmpPasswort = CreateAppAdmin?(AppId, companyID, emailAdmin, secret);
+ * pin = InviteUser?(companyID, AppId , emailAdmin, secret);
+ * status = ChangPasswort?(emailAdmin, old, new);
+ * blockUser(emailUser, AppId , emailAdmin, secret);
+ * applications = Applictions(emailUser,  emailAdmin, secret);
+ * deviceIDs = Devices(emailUser, appId,  emailAdmin, secret);
+ * deviceStatus = Devicestatus(deviceID,  emailAdmin, secret)
