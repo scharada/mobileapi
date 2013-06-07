@@ -1,6 +1,6 @@
-#summary Links to other relevant projects
+#summary Links to relevant projects
 
-= Links to other relevant projects  =
+= Links to other projects  =
 
 http://www.mongodb.org/
 
