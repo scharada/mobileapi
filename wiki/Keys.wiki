@@ -1,0 +1,109 @@
+#summary Keys
+
+== Keys used in JSON and MongoDB ==
+
+|| name	key || 
+|| AdminID	 || adminID || 
+ApplicationID	 || appID || 
+|| Binary	bin || 
+|| BodyLength	blength || 
+|| Created	c || 
+|| CompanyID	 || comID || 
+|| Checksum	 || crc || 
+|| DeviceID	 || devID || 
+|| Email	 || email || 
+|| Encoding	 || enc || 
+|| Fix	  ||  fix || 
+|| GroupID  ||  grpID || 
+|| HeaderLength  || 	hlength || 
+|| Lattidude	lat || 
+|| Longitude || long || 
+|| Message || msg || 
+|| MessageID || msgID || 
+|| Name	|| name || 
+|| Opcode	 || opc || 
+|| Pars  ||  parts || 
+|| Pin	  ||  pin || 
+|| Position || 	pos || 
+|| Priority	 || prio || 
+|| Passwort  ||  pwd || 
+|| Receiver ||  rec || 
+|| Retries	 || retries || 
+|| Satellites || sat || 
+|| Sequence  || seq || 
+|| Sender	 || sndr || 
+|| Token	 ||  tkn || 
+|| Name  ||  ttl  || 
+|| Updated  || u || 
+|| Version	 || vers || 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
