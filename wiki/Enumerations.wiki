@@ -9,6 +9,8 @@
 || 4 || GPS || 
 || 5 || ECHO || 
 || 6 || LOG || 
+|| 7 || UPDATETOKEN || 
+|| 8 || CHANGEGATEWAY || 
 
 ||  *EnumEncoding* || 
 || 0 || NONE || 
