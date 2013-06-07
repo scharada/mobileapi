@@ -7,7 +7,7 @@
 || CRC32	 || 10 || 	4 || 	int		 || Checkum, starting at byte 14 ||
 || BodyLength	 || 14	 || 4	 || int	 || 0	 || Length of the msg body ||
 || Token	 || 18 || 	16 || 	Guid	 || 4d7b45e2-51a6-4b18-908f-d9482dd8bc1c || 	Authenticatinn Token ||
-|| ID	 || 34	16 || Guid	 || f7145321-c0ea-4a88-9df1-d6e7067d6fcd	 || Message ID, used to ACK ||
+|| ID	 || 34	 ||16 || Guid	 || f7145321-c0ea-4a88-9df1-d6e7067d6fcd	 || Message ID, used to ACK ||
 || IDGroup	 || 50 || 	16	 || Guid	 || f9f0fcb8-f951-49cf-8c69-f7622d67b90a	 || Group ID, used by split msg ||
 || IDApplication	 || 66 || 	16 || 	Guid	 || 732fd24a-8117-4a2b-8e55-fed1b57c1f23	 || Application Identifier ||
 || Created	 || 82 || 	8	 || Date	 || 63420019200	 || time in JavaTime ||
