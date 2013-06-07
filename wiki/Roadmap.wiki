@@ -1,8 +1,6 @@
 #summary Roadmap
 
-= Introduction =
-
-Suggested Roadmap:
+== Suggested Roadmap:==
 
 
  # Implement Gateway, Broker and Portal Rapid Prototype in C Sharp only 
