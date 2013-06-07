@@ -2,7 +2,7 @@
 
 == Keys used in JSON and MongoDB ==
 
-|| name	 || key || 
+|| *name*	 || *key* || 
 || AdminID	 || adminID || 
 || ApplicationID	 || appID || 
 || Binary	 ||  bin || 
