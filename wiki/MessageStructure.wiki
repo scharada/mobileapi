@@ -26,7 +26,7 @@
 || Encoding || 	114	 || 1	 || byte	 ||0 || 	1 NONE, 1, BINARY 2 BSON, 3 EXI, 4 ASCII, 5 UTF-8, 6 UTF-16 ||
 
 == ACK ==
-TBD - confirm receiving a message (small as possible)
+TBD - confirm receiving a message part (small as possible)
 
 == NACK ==
 TBD - request resending of a message part (small as possible)
