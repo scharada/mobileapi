@@ -14,7 +14,7 @@
 || IDApplication	 || 66 || 	16 || 	Guid	 || 732fd24a-8117-4a2b-8e55-fed1b57c1f23	 || Application Identifier ||
 || Created	 || 82 || 	8	 || Date	 || 63420019200	 || time in JavaTime ||
 || Sender	 || 90 || 	4 || 	int || 	4711	 || id of the sending entity ||
-|| Receiver	 || 90	 || 4	 || int	123456	 || id of the receiving entity ||
+|| Receiver	 || 90	 || 4	 || int	 ||123456	 || id of the receiving entity ||
 || Opcode	 || 94	 || 1	 || sbyte || 	0	 || 0HELLO, 1ACK, 2MSG, 3LOG, 4TBD ||
 || Parts	 || 98 || 4 || 	int || 	1	 || number of msg parts 1 for single message ||
 || Part	 || 102	 || 4 || 	int || 	0	 || part number ||
