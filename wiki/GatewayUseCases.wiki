@@ -1,1 +1,3 @@
+#summary Gateway Use Cases
+
 == Gateway Use Cases ==
