@@ -4,8 +4,8 @@
 
  * email = CreateCompany(name, email);
  * tmpPasswort, companyID = validateEmailLink(tok, email);
- * tmpPasswort = CreateSuperAdmin?(comID, newAdminEmail, email, pwd);
- * AppId? = CreateApp(comID, email, pwd);
+ * tmpPasswort = CreateSuperAdmin(comID, newAdminEmail, email, pwd);
+ * AppId = CreateApp(comID, email, pwd);
  * tmpPasswort = CreateAppAdmin(AppID, comID, email, pwd);
  * pin = InviteUser(comID, AppId , email, pwd);
  * status = ChangePwd(email, pwd, newPwd);
