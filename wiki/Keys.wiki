@@ -41,6 +41,15 @@
 || Name  ||  ttl  || 
 || Updated  || u || 
 || Version	 || vers || 
+
+
+== DB Collections ==
+|| Company || 
+|| Admin || 
+|| App || 
+|| Device || 
+|| Msg || 
+
 	
 	
 	
