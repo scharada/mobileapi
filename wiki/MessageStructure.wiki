@@ -1,6 +1,6 @@
 #summary MobileAPI Message Structure
 
-|| *Field*	 || *Start* || 	*Length* || *Type*	 || *Example*||	*Comment*
+|| *Field*	 || *Start* || 	*Length* || *Type* || *Example*|| *Comment* ||
 || Magic	 || 0	 || 4	 || chars || 	77,65,84,0 || 	Magic
 || Version	 || 4	 || 2	 || short	 || 0	 || Version number
 || HeaderLength	 || 6	 || 4	 || int	 || 115	 || Length of the msg header
