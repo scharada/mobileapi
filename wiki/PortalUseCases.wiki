@@ -1,4 +1,4 @@
-Summary: Portal Use Cases
+== Portal Use Cases ==
 
  * email = CreateCompany?(name, email);
  * tmpPasswort, companyID = validateEmailLink(token, emailAdmin);
