@@ -3,10 +3,17 @@
 = Links to other relevant projects  =
 
 http://www.mongodb.org/
+
 http://redis.io/
+
 http://bsonspec.org/
+
 http://en.wikipedia.org/wiki/Efficient_XML_Interchange
+
 https://code.google.com/p/keyczar/
+
 http://qpid.apache.org/
+
 http://nginx.org/
+
 http://nodejs.org/
