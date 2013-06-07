@@ -1,6 +1,6 @@
 #summary Keys
 
-== Keys used in Interface,  JSON and MongoDB  and so on==
+== Keys used in Interfaces,  JSON, MongoDB  and so on==
 
 || *name*	 || *key* || 
 || AdminID	 || adminID || 
