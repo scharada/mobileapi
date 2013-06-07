@@ -1,4 +1,5 @@
 #summary MobileAPI Architecture
 #labels architecture
 
-<img src="img/mobileAPI_v0" alt="MobileAPI Architecture">
+
+http://mobileapi.googlecode.com/svn/wiki/img/mobileAPI_v0.png
