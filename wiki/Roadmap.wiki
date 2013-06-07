@@ -5,11 +5,13 @@
 Suggested Roadmap:
 
 
- # Implement Rapid Prototype in C Sharp only 
+ # Implement Gateway, Broker and Portal Rapid Prototype in C Sharp only 
+
+ # Build client Libraries for Windows, Android and iPhone 
 
  # Test on Amazon EC2 Windows with at least 2 Gateways, 1 Broker, 1 Portal, 1  Monitor 
 
- # Build client Libraries for Windows, Android and iPhone 
+
 
  # Refine Protocol and Enumerations 
 
