@@ -2,7 +2,9 @@
 
 = Portal Use Cases =
 
-  * tmpPasswort, companyID = CreateCompany(name, email);
+  *  email = CreateCompany(name, email);
+
+  * tmpPasswort, companyID = validateEmailLink(token, email);
 
   * tmpPasswort = CreateSuperAdmin(companyID, newAdminEmail, email, secret);
 
