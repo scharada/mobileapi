@@ -3,12 +3,13 @@
 
 || *Title* || *Items*  ||   
 || EnumOpcode || || 
-|| 0 || 0HELLO || 
+|| 0 || HELLO || 
 || 1|| ACK || 
 || 2|| NACK || 
 || 3 || MSG || 
 || 4 || GPS || 
-|| 5 || ECHO|| 
+|| 5 || ECHO || 
+|| 6 || LOG || 
 
 || *Title* || *Items*  || 
 ||  EnumEncoding || || 
