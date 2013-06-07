@@ -22,7 +22,7 @@
 || MessageID || msgID || 
 || Name	|| name || 
 || Opcode	 || opc || 
-|| Pars  ||  parts || 
+|| Parts  ||  parts || 
 || Pin	  ||  pin || 
 || Position || 	pos || 
 || Priority	 || prio || 
