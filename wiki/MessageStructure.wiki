@@ -26,15 +26,15 @@
 || Encoding || 	114	 || 1	 || byte	 ||0 || 	1 NONE, 1, BINARY 2 BSON, 3 EXI, 4 ASCII, 5 UTF-8, 6 UTF-16 ||
 
 == ACK ==
-|| *Field*	 	|| *Start* || *Length* || *Type* || *Example*|| *Comment* ||
+|| *Field*	 	|| *Start*  || *Length* || *Type* || *Example*|| *Comment* ||
 || Magic	 	|| 0	 	|| 4 || chars || 	77,65,84,0 || 	Magic ||
 || Version	 	|| 4	 	|| 2 || short	 || 0	 || Version  number ||
 || HeaderLength	|| 6	 	|| 4 || int	 || 115	 || Length of the msg header ||
 || CRC32	 	|| 10 		|| 4 || int	|| 345	 || Checkum, starting at byte 14 ||
 || BodyLength 	|| 14	 	|| 4 || int	 || 0	 || Length of the msg body ||
 || Token	 	|| 18 		|| 16 || Guid	 || 4d7b45e2-51a6-4b18-908f-d9482dd8bc1c || 	Authentication Token ||
-|| ID	 		|| 34	 	|| 16 || Guid	 || f7145321-c0ea-4a88-9df1-d6e7067d6fcd	 || Message ID, used to ACK ||
-|| IDACK        || 66		|| 16 || Guid	 || 732fd24a-8117-4a2b-8e55-fed1b57c1f23	 || Application Identifier ||
+|| ID	 		|| 34	 	|| 16 || Guid	 || f7145321-c0ea-4a88-9df1-d6e7067d6fcd	 || Message ID||
+|| IDACK        || 66		|| 16 || Guid	 || 732fd24a-8117-4a2b-8e55-fed1b57c1f23	 || Message ID to confirm ||
 || Sender	 	|| 90 		|| 4 || int || 	4711	 || id of the sending entity ||
 || Receiver	 	|| 94		|| 4 || int	 ||123456	 || id of the receiving entity ||
 || Opcode	 	|| 98	 	|| 1 || sbyte || 	1	 || 0HELLO, 1ACK, 2MSG, 3LOG, 4TBD ||
@@ -47,8 +47,8 @@
 || CRC32	 	|| 10 		|| 4 || int	|| 345	 || Checkum, starting at byte 14 ||
 || BodyLength 	|| 14	 	|| 4 || int	 || 0	 || Length of the msg body ||
 || Token	 	|| 18 		|| 16 || Guid	 || 4d7b45e2-51a6-4b18-908f-d9482dd8bc1c || 	Authentication Token ||
-|| ID	 		|| 34	 	|| 16 || Guid	 || f7145321-c0ea-4a88-9df1-d6e7067d6fcd	 || Message ID, used to ACK ||
-|| IDNACK        || 66		|| 16 || Guid	 || 732fd24a-8117-4a2b-8e55-fed1b57c1f23	 || Application Identifier ||
+|| ID	 		|| 34	 	|| 16 || Guid	 || f7145321-c0ea-4a88-9df1-d6e7067d6fcd	 || Message ID ||
+|| IDNACK        || 66		|| 16 || Guid	 || 732fd24a-8117-4a2b-8e55-fed1b57c1f23	 || Message ID to resend ||
 || Sender	 	|| 90 		|| 4 || int || 	4711	 || id of the sending entity ||
 || Receiver	 	|| 94		|| 4 || int	 ||123456	 || id of the receiving entity ||
 || Opcode	 	|| 98	 	|| 1 || sbyte || 	2	 || 0HELLO, 1ACK, 2MSG, 3LOG, 4TBD ||
@@ -62,7 +62,7 @@
 || CRC32	 	|| 10 		|| 4 || int	|| 345	 || Checkum, starting at byte 14 ||
 || BodyLength 	|| 14	 	|| 4 || int	 || 0	 || Length of the msg body ||
 || Token	 	|| 18 		|| 16 || Guid	 || 4d7b45e2-51a6-4b18-908f-d9482dd8bc1c || 	Authentication Token ||
-|| ID	 		|| 34	 	|| 16 || Guid	 || f7145321-c0ea-4a88-9df1-d6e7067d6fcd	 || Message ID, used to ACK ||
+|| ID	 		|| 34	 	|| 16 || Guid	 || f7145321-c0ea-4a88-9df1-d6e7067d6fcd	 || Message ID,Location will have no ACK ||
 || IDGroup	 	|| 50 		|| 16 || Guid	 || f9f0fcb8-f951-49cf-8c69-f7622d67b90a	 || Group ID, used by split msg ||
 || IDApplication || 66		|| 16 || Guid	 || 732fd24a-8117-4a2b-8e55-fed1b57c1f23	 || Application Identifier ||
 || Created	 	|| 82 		|| 8 || Date	 || 63420019200	 || time in JavaTime ||
