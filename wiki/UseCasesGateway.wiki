@@ -2,10 +2,12 @@
 
 = Use Cases Gateway =
 
-Hello
+Send:
+void Logon(devID, token);
 
-Route
+void Route(Msg msg);
 
-Log
+void Logoff(devID, token);
 
-GPS
+Receive:
+void Receive(Msg msg);
