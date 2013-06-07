@@ -1,4 +1,4 @@
-#summary MobileAPI Message Structure
+#summary MobileAPI Message Structures
 
 == Message ==
 
