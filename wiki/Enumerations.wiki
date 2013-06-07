@@ -7,11 +7,12 @@
 || 2|| NACK || 
 || 3 || MSG || 
 || 4 || GPS || 
-|| 5 || ECHO || 
-|| 6 || LOG || 
-|| 7 || UPDATETOKEN || 
-|| 8 || CHANGEGATEWAY || 
-|| 9 || LOGOFF || 
+|| 5 || PING || 
+|| 6 || ECHO || 
+|| 7 || LOG || 
+|| 8 || UPDATETOKEN || 
+|| 9 || CHANGEGATEWAY || 
+|| 10 || LOGOFF || 
 
 ||  *EnumEncoding* || 
 || 0 || NONE || 
