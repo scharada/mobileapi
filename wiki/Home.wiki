@@ -4,7 +4,7 @@
 = MobileAPI =
 
 == Goals ===
-Secure, Reliable, Scalable, Open
+Open, Secure, Reliable and  Scalable
 
 == Standards (Protocols) ==
 UDP, XML, XSLT, EXI, BSON, NoSQL
