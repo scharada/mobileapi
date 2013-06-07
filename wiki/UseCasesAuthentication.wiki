@@ -1,0 +1,6 @@
+#summary Authentication Use Cases
+
+== Authentication Use Cases ==
+
+ * token, deviceID, deviceSecret = Register(email, appId, pin);
+ * token = RenewToken(deviceID, appId, deviceSecret );
