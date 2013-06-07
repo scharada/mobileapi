@@ -6,21 +6,11 @@ Suggested Roadmap:
 
 
  # Implement Gateway, Broker and Portal Rapid Prototype in C Sharp only 
-
  # Build client Libraries for Windows, Android and iPhone 
-
  # Test on Amazon EC2 Windows with at least 2 Gateways, 1 Broker, 1 Portal, 1  Monitor 
-
-
-
  # Refine Protocol and Enumerations 
-
  # Build Java version of the Broker 
-
  # Build Java version of the Portal 
-
  # Build C++ version of the Gateway 
-
  # Test on Amazon EC2 Linux  with at least 2 Gateways, 1 Broker, 1 Portal, 1  Monitor 
-
  # Build Amazon Image for single server deployment
