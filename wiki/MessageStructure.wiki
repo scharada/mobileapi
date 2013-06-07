@@ -4,7 +4,7 @@
 
 || *Field*	 || *Start* || 	*Length* || *Type* || *Example*|| *Comment* ||
 || Magic	 || 0	 || 4	 || chars || 	77,65,84,0 || 	Magic ||
-|| Version	 || 4	 || 2	 || short	 || 0	 || Version  ||number
+|| Version	 || 4	 || 2	 || short	 || 0	 || Version  number ||
 || HeaderLength	 || 6	 || 4	 || int	 || 115	 || Length of the msg header ||
 || CRC32	 || 10 || 	4 || 	int		 || Checkum, starting at byte 14 ||
 || BodyLength	 || 14	 || 4	 || int	 || 0	 || Length of the msg body ||
@@ -24,3 +24,6 @@
 || Enryption	 || 112 || 	1 || 	byte	 || 0 || 	0 NONE, 1 TBD ||
 || Retries	 || 113 || 	1	 || byte ||	3	 || Number of retries ||
 || Encoding || 	114	 || 1	 || byte	 ||0 || 	1 NONE, 1, BINARY 2 BSON, 3 EXI, 4 ASCII, 5 UTF-8, 6 UTF-16 ||
+
+== ACK ==
+TBD
