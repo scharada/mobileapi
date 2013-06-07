@@ -46,7 +46,7 @@ TBD - request resending of a message part (small as possible)
 || Created	 	|| 82 		|| 8 || Date	 || 63420019200	 || time in JavaTime ||
 || Sender	 	|| 90 		|| 4 || int || 	4711	 || id of the sending entity ||
 || Receiver	 	|| 94		|| 4 || int	 ||123456	 || id of the receiving entity ||
-|| Opcode	 	|| 98	 	|| 1 || sbyte || 	4	 || 0HELLO, 1ACK, 2MSG, 3LOG, 4TBD ||
+|| Opcode	 	|| 98	 	|| 1 || sbyte || 	4	 || 0HELLO, 1ACK, 2MSG, 3LOG, 4GPS, 5TBD ||
 || Latitude		|| 99 		|| 8 || double || 	47.3686498	 || Latitude||
 || Longitude	|| 107		|| 8 || double || 	8.539182500000038	 || Latitude||
 || Satellites	|| 115		|| 1 || byte	|| 3 || 	Number of Satelites ||
