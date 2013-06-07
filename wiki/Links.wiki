@@ -1,4 +1,5 @@
 #summary Links to relevant projects
+#labels Links,Projects
 
 = Links to other projects  =
 
@@ -13,6 +14,8 @@ http://en.wikipedia.org/wiki/Efficient_XML_Interchange
 https://code.google.com/p/keyczar/
 
 http://qpid.apache.org/
+
+http://xalan.apache.org/
 
 http://nginx.org/
 
