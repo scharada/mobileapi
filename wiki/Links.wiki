@@ -16,4 +16,14 @@ http://qpid.apache.org/
 
 http://nginx.org/
 
+http://linuxorg/
+
 http://nodejs.org/
+
+http://www.android.com/
+
+https://developer.apple.com/devcenter/ios/index.action
+
+http://developer.windowsphone.com/
+
+http://aws.amazon.com/ec2/
