@@ -1,0 +1,6 @@
+#summary MobileAPI Architecture
+#labels architecture
+
+= Introduction =
+
+<img src="img/mobileAPI_v0" alt="MobileAPI Architecture">
