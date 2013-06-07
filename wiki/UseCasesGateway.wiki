@@ -2,12 +2,24 @@
 
 = Use Cases Gateway =
 
-Send:
+= Send =
 void Logon(devID, token);
 
 void Route(Msg msg);
 
 void Logoff(devID, token);
 
-Receive:
+
+ = Receive =
 void Receive(Msg msg);
+
+Msg
+
+ACK
+
+NACK
+
+UpdateToken
+
+ChangeGateway
+
