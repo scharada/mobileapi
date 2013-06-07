@@ -20,5 +20,5 @@
 || TTL	 || 110	 || 4 || int || 	0	 || time to live ||
 || Priority	 || 111	1	byte	 || 1 || 	0 LOW,1 NORMAL,2 HIGH ||
 || Enryption	 || 112 || 	1 || 	byte	 || 0 || 	0 NONE, 1 TBD ||
-|| Retries	 || 113 || 	1	 || byte	3	 || Number of retries ||
-|| Encoding || 	114	 || 1	 || byte	0 || 	1 NONE, 1, BINARY 2 BSON, 3 EXI, 4 ASCII, 5 UTF-8, 6 UTF-16 ||
+|| Retries	 || 113 || 	1	 || byte ||	3	 || Number of retries ||
+|| Encoding || 	114	 || 1	 || byte	 ||0 || 	1 NONE, 1, BINARY 2 BSON, 3 EXI, 4 ASCII, 5 UTF-8, 6 UTF-16 ||
