@@ -3,7 +3,7 @@
 == Suggested Roadmap==
 
 
- * Implement Gateway, Broker and Portal Rapid Prototype in C Sharp only using MSMQ
+ * Implement Gateway, Broker Rapid Prototype in C Sharp only using MSMQ, Portal Client in JQuery
  * Build client Libraries for Windows, Android and iPhone 
  * Test on Amazon EC2 Windows with n Gateways, 1 Broker, 1 Portal, 1  Monitor , 1 API
 
