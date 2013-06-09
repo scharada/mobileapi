@@ -32,3 +32,5 @@ http://developer.windowsphone.com/
 http://aws.amazon.com/ec2/
 
 https://github.com/object/MongOData
+
+http://jquery.com/
