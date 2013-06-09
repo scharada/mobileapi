@@ -25,7 +25,7 @@ Web based configuration portal
 
 
 == Standards and Protocols ==
-UDP, XML, XSLT, EXI, BSON,  NoSQL, OAuth, HTTPS
+UDP, XML, XSLT, EXI, BSON,  NoSQL, OAuth, HTTPS, JQuery
 
 == Server ==
 Linux, Windows
@@ -34,7 +34,7 @@ Linux, Windows
 Android, iOS, Windows Mobile
 
 == Implementation Languages ==
-Java, C#, C++, C
+Java, C#, C++, C, JavaScript
 
 == Platforms ==
 Nginx.org, Redis.org, MongoDB.org, Qpid.org
