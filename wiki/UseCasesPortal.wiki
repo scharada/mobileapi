@@ -23,8 +23,8 @@ email, pwd
 email, oldPwd, newPwd
 [Validate email (regex), validate pdwOld (6-50)],validate pdwNew (6-50)], send, check pwd, update pwd
 
- = App = 
- == ListApps == 
+= App = 
+== ListApps == 
 userId 
 return array of appI, name, desc)
 []
@@ -45,19 +45,19 @@ appID
 appid, req: name, opt: desc
 [Validate name, validate desc, check name is free, update app]
 
- = Device =
- == ListDevices ==
+= Device =
+== ListDevices ==
 appID
 []
 
- == RegisterDevice ==
+== RegisterDevice ==
 appID, deviceID, userName, pin // called from device
 [send, checkAppID, lookup customerAUTH, confirm or ask Customer]
 
- == RegisterDeviceAdmin ==
+== RegisterDeviceAdmin ==
 appID, user, pin // called from admin
 [validate appID, user (min6, max50), pin(min6,max8)  - send - create device without deviceID]
 
- == BlockDevice ==
+== BlockDevice ==
 deviceID
 []
