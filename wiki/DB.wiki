@@ -1,8 +1,6 @@
-#summary DB entities in MongoDB
+#summary DB entities in MongoDB adn Redis
 
-= DB entities in MongoDB =
-
-== DB Schema ==
+== MongoDB ==
 
 || *User* ||
 || ID || guid ||
@@ -19,7 +17,7 @@
 || county || string ||
 || country || string ||
 || lang ||  string ||
-|| state  || number  || (NEW, ACTIVE, BLOCKED) ||
+|| state  || number  || NEW, ACTIVE, BLOCKED ||
 || token || guid ||
 || update || date ||
 || create || date ||
@@ -44,10 +42,10 @@
 || fix || number ||
 || sat || number ||
 || gpstime ||  date ||
-|| state ||  number || (NEW, ACTIVE, BLOCKED)||
+|| state ||  number || NEW, ACTIVE_ON, ACTIVE_OFF, BLOCKED ||
 || token || guid ||
-|| update ||  date ||
-|| create ||  date ||
+|| update || date ||
+|| create || date ||
 
 || *Channel* || 
 || ID ||  guid ||
@@ -73,7 +71,7 @@
 || opcode || number ||
 || sender ||  guid ||
 || receiver || guid ||
-|| status || number ||
+|| status || number || NEW, OTA, ACKED, NACKED, REPORTED
 || content || bin ||
 || update || date ||
 || create || date ||
@@ -83,3 +81,8 @@
 || orgID  || guid  ||
 || Log || bin ||
 || create || date ||
+
+== Redis ==
+|| deviceID_PORT || IP:Port ||
+|| deviceID_TOKEN || token ||
+|| deviceID_GATE || gateID ||
