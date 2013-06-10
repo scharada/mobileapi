@@ -2,47 +2,47 @@
 || *Register* ||
 || name, lang, email ||
 || Validate email (regex) - send - check email is new, if not check pwd and reply error or not) - create user - insert, email confirmation mit token) ||
-|| EmailConfirm ||
+|| *EmailConfirm* ||
 || email, token in email link ||
 || Validate email, token to Guid, send, lookup user, compare token, mark as email confirmed,Passwort screen ||
-|| SetPasswort ||
+|| *SetPasswort* ||
 || email ||
 || Show pwd screen Validate pwd (6-50 and copy), validate email, send, check email unique, register new user, logon ||
-|| Logon ||
+|| *Logon* ||
 || email, pwd ||
 || Validate email (regex), validate pdw (6-50)], send, load User, if exists check pwd} asign session token and save, return token ||
-|| EditProfile ||
+|| *EditProfile* ||
 || id is key, required: email, name,  optional: city, County, Country, Addr1, Addr2, postcode, lang, country, MSISN ||
 || validate req fields, send, update ||
-|| UpdatePwd ||
+|| *UpdatePwd* ||
 || email, oldPwd, newPwd ||
 || Validate email (regex), validate pdwOld (6-50)],validate pdwNew (6-50)], send, check pwd, update pwd ||
 
 || *App* ||
-|| ListApps  ||
+|| *ListApps*  ||
 || userId  ||
 || return array of appI, name, desc ||
-|| CreateApp  ||
+|| *CreateApp*  ||
 || userId, req: name, opt: desc ||
 || validate name(min 6, max 50, desc, max 1024, send, check name unique, create app, return appID ||
-|| InviteUser  ||
+|| *InviteUser*  ||
 || appId, email new User ||
 || Validate email (regex), send, check userExists, if not invite email, checkApp exists, add app to the unconfirmed user ||
-|| DeleteApp  ||
+|| *DeleteApp*  ||
 || appID  ||
 || confirm Popup, send, delete app ||
-|| EditApp  ||
+|| *EditApp*  ||
 || appid, req: name, opt: desc ||
 || Validate name, validate desc, check name is free, update app ||
 
 || *Device* ||
-|| ListDevices  ||
+|| *ListDevices*  ||
 || appID  ||
-|| RegisterDevice  ||
+|| *RegisterDevice* ||
 || appID, deviceID, userName, pin // called from device ||
 || send, checkAppID, lookup customerAUTH, confirm or ask Customer ||
-|| RegisterDeviceAdmin  ||
+|| *RegisterDeviceAdmin*  ||
 || appID, user, pin // called from admin ||
 || validate appID, user (min6, max50), pin(min6,max8)  - send - create device without deviceID ||
-|| BlockDevice  ||
+|| *BlockDevice*  ||
 || deviceID ||
