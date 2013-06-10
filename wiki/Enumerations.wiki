@@ -52,3 +52,13 @@
 || 3 || P2P_UNRELIABLE || 
 || 4 || P2P_RELIABLE || 
 || 5 || P2P_REPORTED || 
+
+||  *EnumDeviceStatus* ||
+|| 0 || NEW || 
+|| 1 || ACTIVE || 
+|| 2 || BLOCKED || 
+
+||  *EnumUserStatus* ||
+|| 0 || NEW || 
+|| 1 || ACTIVE || 
+|| 2 || BLOCKED || 
