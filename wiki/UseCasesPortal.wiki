@@ -1,4 +1,4 @@
- = User =
+= User =
 == Register ==
 name, lang, email
 [Validate email (regex) - send - check email is new, if not check pwd and reply error or not) - create user - insert, email confirmation mit token)
@@ -29,15 +29,15 @@ userId
 return array of appI, name, desc)
 []
 
- == CreateApp ==
+== CreateApp ==
 userId, req: name, opt: desc
 [validate name(min 6, max 50, desc, max 1024, send, check name unique, create app, return appID)
 
- == InviteUser ==
+== InviteUser ==
 appId, email new User
 [Validate email (regex), send, check userExists, if not invite email, checkApp exists, add app to the unconfirmed user
 
- == DeleteApp ==
+== DeleteApp ==
 appID
 [confirm Popup, send, delete app]
 
