@@ -24,11 +24,13 @@ email, oldPwd, newPwd
 [Validate email (regex), validate pdwOld (6-50)],validate pdwNew (6-50)], send, check pwd, update pwd
 
  = App = 
- == ListApps == (userId) (return array of appI, name, desc)
+ == ListApps == 
+userId 
+return array of appI, name, desc)
 []
 
  == CreateApp ==
-(userId, req: name, opt: desc)
+userId, req: name, opt: desc
 [validate name(min 6, max 50, desc, max 1024, send, check name unique, create app, return appID)
 
  == InviteUser ==
@@ -36,7 +38,7 @@ appId, email new User
 [Validate email (regex), send, check userExists, if not invite email, checkApp exists, add app to the unconfirmed user
 
  == DeleteApp ==
-(appID)
+appID
 [confirm Popup, send, delete app]
 
 == EditApp ==
