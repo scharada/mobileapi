@@ -10,7 +10,7 @@ void Route(Msg msg);
 void Logoff(devID, token);
 
 
- = Receive =
+= Receive =
 void Receive(Msg msg);
 
 Msg
@@ -22,4 +22,3 @@ NACK
 UpdateToken
 
 ChangeGateway
-
