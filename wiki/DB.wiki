@@ -1,4 +1,4 @@
-#summary DB entities in MongoDB adn Redis
+#summary DB entities in MongoDB and Redis
 
 == MongoDB ==
 
@@ -42,7 +42,7 @@
 || fix || number ||
 || sat || number ||
 || gpstime ||  date ||
-|| state ||  number || NEW, ACTIVE_ON, ACTIVE_OFF, BLOCKED ||
+|| state ||  number || EnumDeviceStatus ||
 || token || guid ||
 || update || date ||
 || create || date ||
@@ -71,7 +71,7 @@
 || opcode || number ||
 || sender ||  guid ||
 || receiver || guid ||
-|| status || number || NEW, TRANSIT, ACKED, NACKED, REPORTING, REPORTEDACK, REPORTNACK ||
+|| status || number || EnumMsgStatus ||
 || content || bin ||
 || update || date ||
 || create || date ||
