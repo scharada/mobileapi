@@ -19,7 +19,7 @@
 || county || string ||
 || country || string ||
 || lang ||  string ||
-|| state  || number  || (NEW, ACTIVE, BLOCKED)
+|| state  || number  || (NEW, ACTIVE, BLOCKED) ||
 || token || guid ||
 || update || date ||
 || create || date ||
@@ -44,7 +44,7 @@
 || fix || number ||
 || sat || number ||
 || gpstime ||  date ||
-|| state ||  number || (NEW, ACTIVE, BLOCKED)
+|| state ||  number || (NEW, ACTIVE, BLOCKED)||
 || token || guid ||
 || update ||  date ||
 || create ||  date ||
