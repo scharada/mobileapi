@@ -13,8 +13,8 @@ void Logoff(devID, token);
 = Receive =
 void Receive(Msg msg);
 
-# Msg
-# ACK
-# NACK
-# UpdateToken
-# ChangeGateway
+ # Msg
+ # ACK
+ # NACK
+ # UpdateToken
+ # ChangeGateway
