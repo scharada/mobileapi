@@ -17,7 +17,7 @@
 || county || string ||
 || country || string ||
 || lang ||  string ||
-|| state  || number  || NEW, ACTIVE, BLOCKED ||
+|| status || number  || EnumUserStatus ||
 || token || guid ||
 || update || date ||
 || create || date ||
@@ -42,7 +42,7 @@
 || fix || number ||
 || sat || number ||
 || gpstime ||  date ||
-|| state ||  number || EnumDeviceStatus ||
+|| status ||  number || EnumDeviceStatus ||
 || token || guid ||
 || update || date ||
 || create || date ||
