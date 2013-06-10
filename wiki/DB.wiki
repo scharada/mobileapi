@@ -71,7 +71,7 @@
 || opcode || number ||
 || sender ||  guid ||
 || receiver || guid ||
-|| status || number || NEW, OTA, ACKED, NACKED, REPORTED
+|| status || number || NEW, OTA, ACKED, NACKED, REPORTED ||
 || content || bin ||
 || update || date ||
 || create || date ||
