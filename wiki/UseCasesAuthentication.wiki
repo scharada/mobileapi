@@ -2,5 +2,9 @@
 
 == Authentication Use Cases ==
 
- * token, deviceID, deviceSecret = Register(email, appId, pin);
- * token = RenewToken(deviceID, appId, deviceSecret );
+|| *Register* ||
+|| Register(email, appID, pin);  ||
+
+
+|| *Renew Token*  ||
+|| {{{token renewToken(deviceID, appId, deviceSecret ); }}} ||
