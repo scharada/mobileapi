@@ -3,7 +3,7 @@
 == Authentication Use Cases ==
 
 || *Register* ||
-|| secret register(appID, deviceID, user, pin);  ||
+|| secret:token register(appID, deviceID, user, pin);  ||
 
 
 || *Renew Token*  ||
