@@ -1,4 +1,4 @@
-#summary Authentication Use Cases
+#summary Use Cases Authentication
 
 == Authentication Use Cases ==
 
