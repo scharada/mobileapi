@@ -67,3 +67,9 @@
 || 0 || NONE || 
 || 1 || XSLT || 
 || 2 || KEYPAIR || 
+
+|| *EnumAddressType* ||
+|| 0 || NONE || 
+|| 1 || XPATH || 
+|| 2 || KEYPAIR ||
+|| 3 || TBD ||
