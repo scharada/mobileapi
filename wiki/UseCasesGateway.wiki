@@ -2,6 +2,13 @@
 
 = Use Cases Gateway =
 
+View of the mobile application developer:
+
+void send(channel, msg);
+void receive(msg);
+
+
+
 = Send =
 void Logon(devID, token);
 
