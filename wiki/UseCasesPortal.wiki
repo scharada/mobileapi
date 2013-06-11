@@ -40,13 +40,10 @@
 || *Channel* ||
 || *ListChannels*  ||
 || appID  ||
-
 || *AddChannel* ||
 || appID,name, configuration ||
-
 || *EditChannel*  ||
 || channelID, configuration ||
-
 || *RemoveChannel*  ||
 || channelID ||
 
