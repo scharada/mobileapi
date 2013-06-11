@@ -1,54 +1,46 @@
 #summary Use Cases API - SOAP service and Admin Portal
 
 || *User* || 
-|| *Register* || Registration of a new administrator ||
+|| *Register* || Registration of a new Admin ||
 || {{{void register(string name, enumLanguage lang, string email);}}} ||
  || TBD: email template?  ||
 
-|| *EmailConfirm* || User confirms his email by clicking link in email ||
+|| *EmailConfirm* || Admin confirms his email by clicking link in email ||
 || {{{void confirm(email, token);}}} ||
 
 
-|| *SetPasswort* ||
+|| *SetPasswort* || Admin sets Passwort ||
 || {{{void setPwd(email, pwd, pwd2);}}} ||
 
 
-|| *Logon* ||
+|| *Logon* || Admin logs on to Portal, session key stored JavaScript ||
 || {{{ void logon(email, pwd);}}} ||
 
 
 || *EditProfile* ||
-|| id is key, required: email, name,  optional: city, County, Country, Addr1, Addr2, postcode, lang, country, MSISN ||
-|| validate req fields, send, update ||
+|| {{{void edit(email, name,  optional: city, County, Country, Addr1, Addr2, postcode, lang, country, MSISN);}}} ||
 
 || *UpdatePwd* ||
-|| email, oldPwd, newPwd ||
-|| Validate email (regex), validate pdwOld (6-50)],validate pdwNew (6-50)], send, check pwd, update pwd ||
+|| {{{void updatePwd(email, oldPwd, newPwd);}}} ||
 
 || *App* ||
 || *ListApps*  ||
-|| userId  ||
-|| return array of appI, name, desc ||
+|| {{{App listApps(userId) ;}}} ||
 
 || *CreateApp*  ||
-|| userId, req: name, opt: desc ||
-|| validate name(min 6, max 50, desc, max 1024, send, check name unique, create app, return appID ||
+|| {{{void createApp(userId, name, desc);}}} ||
 
 || *InviteUser*  ||
-|| appId, email new User ||
-|| Validate email (regex), send, check userExists, if not invite email, checkApp exists, add app to the unconfirmed user ||
+|| {{{void inviteUser(appId, email );}}} ||
 
 || *DeleteApp*  ||
-|| appID  ||
-|| confirm Popup, send, delete app ||
+|| {{void deleteApp(appID );}}}||
 
 || *EditApp*  ||
-|| appid, req: name, opt: desc ||
-|| Validate name, validate desc, check name is free, update app ||
+|| {{void editApp(appid, name, desc);}}} ||
 
 || *Channel* ||
-|| *ListChannels*  ||
-|| appID  ||
+|| {{void listChannels(appid); }}} ||
 
 || *AddChannel* ||
 || appID, name, transportConfig, mappingConfig, addrResConfig ||
