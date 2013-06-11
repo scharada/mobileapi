@@ -5,7 +5,7 @@
 = Send =
 void Logon(devID, token);
 
-void Route(Msg msg);
+void Route(token, channel, msg);
 
 void Logoff(devID, token);
 
