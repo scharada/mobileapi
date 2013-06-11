@@ -23,16 +23,16 @@
 || {{{App listApps(userId) ;}}} ||
 
 || *Create Application*  ||
-|| {{{void createApp(userId, name, desc);}}} ||
-
-|| *Invite Admin*  ||
-|| {{{void inviteUser(appId, email );}}} ||
+|| {{{void createApp(userId, name, desc, autoRegistration);}}} ||
 
 || *Delete Application*  ||
 || {{{void deleteApp(appID );}}}||
 
 || *Edit Application*  ||
-|| {{{void editApp(appid, name, desc);}}} ||
+|| {{{void editApp(appid, name, desc, autoRegistration);}}} ||
+
+|| *Invite Admin*  ||
+|| {{{void inviteUser(appId, email );}}} ||
 
 || *List Channels* ||
 || {{{void listChannels(appid); }}} ||
@@ -50,7 +50,7 @@
 || {{{List listDevices(appID);}}} ||
 
 || *Register Device* ||
-|| {{{void registerDevice(appID, deviceID, userName, pin); }}} || called from device ||
+|| {{{void registerDevice(appID, deviceID, userName, pin); }}} ||
 
 || *Block Device*  ||
-|| {{{void bllockDevice(deviceID);}}} ||
+|| {{{void blockDevice(deviceID);}}} ||
