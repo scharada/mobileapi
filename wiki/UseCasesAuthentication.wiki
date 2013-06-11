@@ -10,4 +10,4 @@
 || {{{token renewToken(appId, deviceID, secret); }}} ||
 
 
-Use HTTPS
+Use REST over HTTPS
