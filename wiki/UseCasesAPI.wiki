@@ -50,7 +50,10 @@
 || {{{List listDevices(appID);}}} ||
 
 || *Register Device* ||
-|| {{{void registerDevice(appID, deviceID, userName, pin); }}} ||
+|| {{{void registerDevice(appID, deviceID, user, secret); }}} ||
+
+|| *Enable Device* ||
+|| {{{void enableDevice(appID, user, pin); }}} ||
 
 || *Block Device*  ||
 || {{{void blockDevice(deviceID);}}} ||
