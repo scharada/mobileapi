@@ -34,38 +34,29 @@
 || {{{void inviteUser(appId, email );}}} ||
 
 || *DeleteApp*  ||
-|| {{void deleteApp(appID );}}}||
+|| {{{void deleteApp(appID );}}}||
 
 || *EditApp*  ||
-|| {{void editApp(appid, name, desc);}}} ||
+|| {{{void editApp(appid, name, desc);}}} ||
 
 || *Channel* ||
-|| {{void listChannels(appid); }}} ||
+|| {{{void listChannels(appid); }}} ||
 
 || *AddChannel* ||
-|| appID, name, transportConfig, mappingConfig, addrResConfig ||
+|| {{{void addChannel(appID, name, transportConfig, mappingConfig, addrResConfig); }}}||
 
 || *EditChannel*  ||
-|| channelID,  transportConfig, mappingConfig, addrResConfig ||
+|| {{{void editChannel(channelID,  transportConfig, mappingConfig, addrResConfig); }}}||
 
 || *RemoveChannel*  ||
-|| channelID ||
+|| {{{void removeChannel(channelID); }}} ||
 
 || *Device* ||
 || *ListDevices*  ||
-|| appID  ||
+|| {{{List listDevices(appID);}}} ||
 
 || *RegisterDevice* ||
-|| appID, deviceID, userName, pin // called from device ||
-|| send, checkAppID, lookup customerAUTH, confirm or ask Customer ||
-
-|| *RegisterDeviceAdmin*  ||
-|| appID, user, pin // called from admin ||
-|| validate appID, user (min6, max50), pin(min6,max8)  - send - create device without deviceID ||
+|| {{{void registerDevice(appID, deviceID, userName, pin); }}} || called from device ||
 
 || *BlockDevice*  ||
-|| deviceID ||
-
-|| *Msg* ||
-|| *Route*  ||
-|| channel, msg  ||
+|| {{{void bllockDevice(deviceID);}}} ||
