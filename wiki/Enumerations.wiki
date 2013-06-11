@@ -73,3 +73,12 @@
 || 1 || XPATH || 
 || 2 || KEYPAIR ||
 || 3 || TBD ||
+
+|| *EnumAddressPermission* ||
+|| 0 || NONE || 
+|| 1 || ACK || 
+|| 2 || GATEWAY ||
+|| 4 || BACKEND ||
+|| 8 || P2PCHECK ||
+|| 16 || P2PALL ||
+|| 32 || GPS ||
