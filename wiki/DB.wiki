@@ -52,11 +52,19 @@
 || appID ||  guid ||
 || retries || number ||
 || ttl || number ||
+|| priority || number ||
 || opcode || number || 
 || mapOut || string || 
 || mapOutType || EnumMapType|| 
 || mapIn || string || 
 || mapInType || EnumMapType||
+|| addressType || EnumAddressType ||
+|| addressXPath || string ||
+|| addressMap || string ||
+|| addressPermission || EnumAddressPermission||
+|| callBackURL || string ||
+|| callBackUser || string ||
+|| callBackPwd || string ||
 || update || date ||
 || create || date ||
 
