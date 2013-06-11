@@ -3,8 +3,8 @@
 == Authentication Use Cases ==
 
 || *Register* ||
-|| Register(email, appID, pin);  ||
+|| secret register(appID, deviceID, user, pin);  ||
 
 
 || *Renew Token*  ||
-|| {{{token renewToken(deviceID, appId, deviceSecret ); }}} ||
+|| {{{token renewToken(appId, deviceID, secret); }}} ||
