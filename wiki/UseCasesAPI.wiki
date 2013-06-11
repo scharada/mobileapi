@@ -4,53 +4,53 @@
 || {{{void register(string name, enumLanguage lang, string email);}}} ||
 || TBD: email template?  ||
 
-|| *EmailConfirm* || Admin confirms his email by clicking link in email ||
+|| *Email Confirm* || Admin confirms his email by clicking link in email ||
 || {{{void confirm(email, token, appID);}}} || appID can be null, used by invite || 
 
-|| *SetPasswort* || Admin sets Passwort ||
+|| *Set Passwort* || Admin sets Passwort ||
 || {{{void setPwd(email, pwd, pwd2);}}} ||
 
 || *Logon* || Admin logs on to Portal, session key stored JavaScript ||
 || {{{ void logon(email, pwd);}}} ||
 
-|| *EditProfile* ||
+|| *Edit Profile* ||
 || {{{void edit(email, name,  optional: city, County, Country, Addr1, Addr2, postcode, lang, country, MSISN);}}} ||
 
-|| *UpdatePwd* ||
+|| *Update Passwort* ||
 || {{{void updatePwd(email, oldPwd, newPwd);}}} ||
 
-|| *ListApps*  ||
+|| *List Applications*  ||
 || {{{App listApps(userId) ;}}} ||
 
-|| *CreateApp*  ||
+|| *Create Application*  ||
 || {{{void createApp(userId, name, desc);}}} ||
 
-|| *InviteUser*  ||
+|| *Invite Admin*  ||
 || {{{void inviteUser(appId, email );}}} ||
 
-|| *DeleteApp*  ||
+|| *Delete Application*  ||
 || {{{void deleteApp(appID );}}}||
 
-|| *EditApp*  ||
+|| *Edit Application*  ||
 || {{{void editApp(appid, name, desc);}}} ||
 
-|| *Channel* ||
+|| *List Channels* ||
 || {{{void listChannels(appid); }}} ||
 
-|| *AddChannel* ||
+|| *Add Channel* ||
 || {{{void addChannel(appID, name, transportConfig, mappingConfig, addrResConfig); }}}||
 
-|| *EditChannel*  ||
+|| *Edit Channel*  ||
 || {{{void editChannel(channelID,  transportConfig, mappingConfig, addrResConfig); }}}||
 
-|| *RemoveChannel*  ||
+|| *Remove Channel*  ||
 || {{{void removeChannel(channelID); }}} ||
 
-|| *ListDevices*  ||
+|| *List Devices*  ||
 || {{{List listDevices(appID);}}} ||
 
-|| *RegisterDevice* ||
+|| *Register Device* ||
 || {{{void registerDevice(appID, deviceID, userName, pin); }}} || called from device ||
 
-|| *BlockDevice*  ||
+|| *Block Device*  ||
 || {{{void bllockDevice(deviceID);}}} ||
