@@ -63,7 +63,7 @@
 || 1 || ACTIVE || 
 || 2 || BLOCKED || 
 
-||  EnumMapType* ||
+|| *EnumMapType* ||
 || 0 || NONE || 
 || 1 || XSLT || 
 || 2 || KEYPAIR || 
