@@ -91,7 +91,7 @@
 || *Audit*  ||
 || ID  || guid  ||
 || orgID  || guid  ||
-|| Log || bin ||
+|| Log || string||
 || create || date ||
 
 == Redis ==
