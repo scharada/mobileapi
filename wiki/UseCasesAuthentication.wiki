@@ -1,4 +1,4 @@
-#summary Use Cases Authentication
+#summary Use Cases Authentication Service
 
 == Authentication Use Cases ==
 
@@ -8,3 +8,6 @@
 
 || *Renew Token*  ||
 || {{{token renewToken(appId, deviceID, secret); }}} ||
+
+
+Use HTTPS
