@@ -14,7 +14,7 @@
 || {{{ void logon(email, pwd);}}} ||
 
 || *Edit Profile* ||
-|| {{{void edit(email, name,  optional: city, County, Country, Addr1, Addr2, postcode, lang, country, MSISN);}}} ||
+|| {{{void edit(email, name,  optional: city, county, country, addr1, addr2, postcode, lang, country, MSISN);}}} ||
 
 || *Update Passwort* ||
 || {{{void updatePwd(email, oldPwd, newPwd);}}} ||
