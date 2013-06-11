@@ -76,7 +76,7 @@
 || update ||  date ||
 || create ||  date ||
 
-|| *Msg* || 
+|| *MsgLog* || 
 || ID ||  guid ||
 || msgID ||  guid ||
 || appID ||  guid ||
