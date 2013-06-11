@@ -1,21 +1,17 @@
 #summary Use Cases API - SOAP service and Admin Portal
-
-|| *User* || 
+| 
 || *Register* || Registration of a new Admin ||
 || {{{void register(string name, enumLanguage lang, string email);}}} ||
- || TBD: email template?  ||
+|| TBD: email template?  ||
 
 || *EmailConfirm* || Admin confirms his email by clicking link in email ||
 || {{{void confirm(email, token);}}} ||
 
-
 || *SetPasswort* || Admin sets Passwort ||
 || {{{void setPwd(email, pwd, pwd2);}}} ||
 
-
 || *Logon* || Admin logs on to Portal, session key stored JavaScript ||
 || {{{ void logon(email, pwd);}}} ||
-
 
 || *EditProfile* ||
 || {{{void edit(email, name,  optional: city, County, Country, Addr1, Addr2, postcode, lang, country, MSISN);}}} ||
@@ -23,7 +19,6 @@
 || *UpdatePwd* ||
 || {{{void updatePwd(email, oldPwd, newPwd);}}} ||
 
-|| *App* ||
 || *ListApps*  ||
 || {{{App listApps(userId) ;}}} ||
 
@@ -51,7 +46,6 @@
 || *RemoveChannel*  ||
 || {{{void removeChannel(channelID); }}} ||
 
-|| *Device* ||
 || *ListDevices*  ||
 || {{{List listDevices(appID);}}} ||
 
