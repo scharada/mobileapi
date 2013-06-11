@@ -72,7 +72,7 @@
 || 0 || NONE || 
 || 1 || XPATH || 
 || 2 || KEYPAIR ||
-|| 3 || TBD ||
+|| 4 || TBD ||
 
 || *EnumAddressPermission* ||
 || 0 || NONE || 
