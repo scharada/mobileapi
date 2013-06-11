@@ -3,7 +3,7 @@
 || *User* || 
 || *Register* || Registration of a new administrator ||
 || {{{void register(string name, enumLanguage lang, string email);}}}
-|| Validate email (regex) - send - check email is new, if not check pwd and reply error or not) - create user - insert, email confirmation mit token) ||
+|| ||Validate email (regex) - send - check email is new, if not check pwd and reply error or not) - create user - insert, email confirmation mit token) ||
 
 || *EmailConfirm* ||
 || email, token in email link ||
