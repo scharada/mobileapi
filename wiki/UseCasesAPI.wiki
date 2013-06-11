@@ -41,9 +41,9 @@
 || *ListChannels*  ||
 || appID  ||
 || *AddChannel* ||
-|| appID,name, configuration ||
+|| appID, name, transportConfig, mappingConfig, addrResConfig ||
 || *EditChannel*  ||
-|| channelID, configuration ||
+|| channelID,  transportConfig, mappingConfig, addrResConfig ||
 || *RemoveChannel*  ||
 || channelID ||
 
@@ -58,3 +58,7 @@
 || validate appID, user (min6, max50), pin(min6,max8)  - send - create device without deviceID ||
 || *BlockDevice*  ||
 || deviceID ||
+
+|| *Msg* ||
+|| *Route*  ||
+|| channel, msg  ||
