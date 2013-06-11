@@ -1,8 +1,8 @@
 #summary Use Cases API - SOAP service and Admin Portal
 
 || *User* || 
-|| *Register* ||
-|| name, lang, email ||
+|| *Register* || Registration of a new developer ||
+|| 'name, lang, email' ||
 || Validate email (regex) - send - check email is new, if not check pwd and reply error or not) - create user - insert, email confirmation mit token) ||
 || *EmailConfirm* ||
 || email, token in email link ||
