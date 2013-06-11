@@ -53,6 +53,13 @@
 || retries || number ||
 || ttl || number ||
 || opcode || number || 
+
+|| mapOut || string || 
+|| mapOutType || EnumMapType|| 
+
+|| mapIn || string || 
+|| mapInType || EnumMapType||
+
 || update || date ||
 || create || date ||
 
