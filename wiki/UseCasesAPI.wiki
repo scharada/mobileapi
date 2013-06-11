@@ -5,7 +5,7 @@
 || TBD: email template?  ||
 
 || *EmailConfirm* || Admin confirms his email by clicking link in email ||
-|| {{{void confirm(email, token, appID);}}} || appID can be null || 
+|| {{{void confirm(email, token, appID);}}} || appID can be null, used by invite || 
 
 || *SetPasswort* || Admin sets Passwort ||
 || {{{void setPwd(email, pwd, pwd2);}}} ||
