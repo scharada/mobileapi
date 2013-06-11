@@ -1,4 +1,4 @@
-#summary Use Cases Portal
+#summary Use Cases API - SOAP service and Admin Portal
 
 || *User* || 
 || *Register* ||
