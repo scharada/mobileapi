@@ -12,7 +12,8 @@ using MongoDB.Driver;
 using System.Configuration;
 using MongoDB.Driver.Builders;
 using org.mobileapi.server.windows.shared;
-namespace org.mobileapi.server.windows.portal
+
+namespace org.mobileapi.server.windows.shared.db
 {
     // http://docs.mongodb.org/ecosystem/tutorial/use-csharp-driver/
     public class UserService
@@ -69,8 +70,8 @@ namespace org.mobileapi.server.windows.portal
         public void Update(User user)
         {
             MongoCollection<User> collection = _DB.GetCollection<User>(Key.USER);
-             var query = Query<User>.EQ(e => e.Email, user.Email);
-             var userDB  = collection.FindOne(query);
+            var query = Query<User>.EQ(e => e.Email, user.Email);
+            var userDB  = collection.FindOne(query);
             userDB.Addr0 = user.Addr0;
             userDB.Addr1 = user.Addr1;
             userDB.appIDS = user.appIDS;
