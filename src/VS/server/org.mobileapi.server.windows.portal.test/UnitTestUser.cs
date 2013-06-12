@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using org.mobileapi.server.windows.shared;
+using org.mobileapi.server.windows.shared.db;
 
 namespace org.mobileapi.server.windows.portal.test
 {
