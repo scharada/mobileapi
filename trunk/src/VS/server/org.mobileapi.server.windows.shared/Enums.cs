@@ -82,8 +82,9 @@ namespace org.mobileapi.server.windows.shared
      public enum EnumUserStatus
      {
          NEW = 0,
-         ACTIVE = 1,
-         BLOCKED = 2
+         INVITED = 1,
+         ACTIVE = 2,
+         BLOCKED = 3
      }
 
      public enum EnumMapType
