@@ -14,6 +14,7 @@ using MongoDB.Driver.Builders;
 using org.mobileapi.server.windows.shared;
 namespace org.mobileapi.server.windows.portal
 {
+    // http://docs.mongodb.org/ecosystem/tutorial/use-csharp-driver/
     public class UserService
     {
 
@@ -25,12 +26,19 @@ namespace org.mobileapi.server.windows.portal
 
         public UserService()
         {
-            _MongoClient = new MongoClient(ConfigurationSettings.AppSettings[Key.MONGODB_CONNSTRING]);
-            _server = _MongoClient.GetServer();
-            _DB = _server.GetDatabase(Key.DB);
+            try
+            {
+                _MongoClient = new MongoClient(ConfigurationSettings.AppSettings[Key.MONGODB_CONNSTRING]);
+                _server = _MongoClient.GetServer();
+                _DB = _server.GetDatabase(Key.DB);
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err);
+            }
         }
 
-        public User Get(string email)
+        public User Read(string email)
         {
             MongoCollection<User> collection = _DB.GetCollection<User>(Key.USER);
             var query = Query<User>.EQ(e => e.Email, email);
@@ -39,19 +47,22 @@ namespace org.mobileapi.server.windows.portal
 
         public bool Exists(string email)
         {
-            var collection = _DB.GetCollection<User>(Key.USER);
+            MongoCollection<User> collection  = _DB.GetCollection<User>(Key.USER);
             var query = Query<User>.EQ(e => e.Email, email);
-            User user = collection.FindOne(query);
-            if (user == null)
+            foreach (User u in collection.Find(query))
             {
-                return false;
+                return true;
             }
-            return true;
+            return false;
         }
 
-        public void Insert(User user)
+        public void Create(User user)
         {
-            var collection = _DB.GetCollection<User>(Key.USER);
+            if (Exists(user.Email))
+            {
+                return;
+            }
+            MongoCollection<User> collection  = _DB.GetCollection<User>(Key.USER);
             collection.Insert(user);
         }
 
@@ -79,10 +90,10 @@ namespace org.mobileapi.server.windows.portal
             collection.Save(userDB);
         }
 
-        public void Delete(Guid ID)
+        public void Delete(User user )
         {
             MongoCollection<User> collection = _DB.GetCollection<User>(Key.USER);
-            var query = Query<User>.EQ(e => e.ID, ID);
+            var query = Query<User>.EQ(e => e.ID, user.ID);
             collection.Remove(query);
         }
 
