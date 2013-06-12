@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,12 @@ namespace org.mobileapi.server.windows.shared
 {
     public class User
     {
+        public BsonObjectId _id
+        {
+            set;
+            get;
+        }
+
        public Guid ID	 
        {
            set; get;
