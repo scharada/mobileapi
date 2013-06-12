@@ -45,6 +45,7 @@
     <Compile Include="Conf.cs" />
     <Compile Include="Device.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="Key.cs" />
     <Compile Include="MsgLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
