@@ -43,7 +43,7 @@ namespace org.mobileapi.server.windows.portal.code
                 user.Email = email;
                 user.Token = Guid.NewGuid();
                 user.Status = EnumUserStatus.NEW;
-                service.Insert(user);
+                service.Create(user);
 
                  // send email
                 user.Status = EnumUserStatus.INVITED;
