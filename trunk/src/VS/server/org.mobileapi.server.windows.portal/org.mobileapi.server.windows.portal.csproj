@@ -39,6 +39,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MongoDB.Bson">
+      <HintPath>C:\Program Files (x86)\MongoDB\CSharpDriver 1.8.1\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>C:\Program Files (x86)\MongoDB\CSharpDriver 1.8.1\MongoDB.Driver.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -57,18 +63,64 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="c.aspx" />
+    <Content Include="css\ui-lightness\images\animated-overlay.gif" />
+    <Content Include="css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\ui-lightness\jquery-ui-1.10.3.custom.css" />
+    <Content Include="css\ui-lightness\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="css\default.css" />
+    <Content Include="images\header-img.jpg" />
+    <Content Include="images\img01.jpg" />
+    <Content Include="images\main-bg copy.png" />
+    <Content Include="images\main-bg.png" />
+    <Content Include="index.html" />
+    <Content Include="js\jquery-1.9.1.js" />
+    <Content Include="js\jquery-ui-1.10.3.custom.js" />
+    <Content Include="js\jquery-ui-1.10.3.custom.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="c.aspx.cs">
+      <DependentUpon>c.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="c.aspx.designer.cs">
+      <DependentUpon>c.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="code\Login.cs" />
+    <Compile Include="code\Logout.cs" />
+    <Compile Include="code\Register.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\.DS_Store" />
+    <Content Include="css\ui-lightness\.DS_Store" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\org.mobileapi.server.windows.shared\org.mobileapi.server.windows.shared.csproj">
+      <Project>{76c0171f-36d0-4d58-80ac-f3c83c7b063b}</Project>
+      <Name>org.mobileapi.server.windows.shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -83,7 +135,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>1199</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:1489/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>mobileAPI</title>
+<link href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.10.3.custom.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
+<link href="css/default.css" rel="stylesheet" type="text/css" media="all" />
+
+
+<script>
+
+
+    $(function () {
+
+        $("#accordion").accordion();
+
+        var availableTags = [
+			"ActionScript",
+			"AppleScript",
+			"Asp",
+			"BASIC",
+			"C",
+			"C++",
+			"Clojure",
+			"COBOL",
+			"ColdFusion",
+			"Erlang",
+			"Fortran",
+			"Groovy",
+			"Haskell",
+			"Java",
+			"JavaScript",
+			"Lisp",
+			"Perl",
+			"PHP",
+			"Python",
+			"Ruby",
+			"Scala",
+			"Scheme"
+        ];
+        $("#autocomplete").autocomplete({
+            source: availableTags
+        });
+
+
+
+        $("#button").button();
+        $("#radioset").buttonset();
+
+
+
+        $("#tabs").tabs();
+
+
+
+        $("#dialog").dialog({
+            autoOpen: false,
+            width: 400,
+            buttons: [
+				{
+				    text: "Ok",
+				    click: function () {
+				        $(this).dialog("close");
+				    }
+				},
+				{
+				    text: "Cancel",
+				    click: function () {
+				        $(this).dialog("close");
+				    }
+				}
+            ]
+        });
+
+        // Link to open the dialog
+        $("#dialog-link").click(function (event) {
+            $("#dialog").dialog("open");
+            event.preventDefault();
+        });
+
+
+
+        $("#datepicker").datepicker({
+            inline: true
+        });
+
+
+
+        $("#slider").slider({
+            range: true,
+            values: [17, 67]
+        });
+
+
+
+        $("#progressbar").progressbar({
+            value: 20
+        });
+
+
+        // Hover states on the static widgets
+        $("#dialog-link, #icons li").hover(
+			function () {
+			    $(this).addClass("ui-state-hover");
+			},
+			function () {
+			    $(this).removeClass("ui-state-hover");
+			}
+		);
+    });
+	</script>
+	
+
+</head>
+<body>
+<form id="myform" method="post"">
+<div id="header-wrapper">
+	<div id="header">
+		<div id="logo">
+		<img src="https://code.google.com/p/mobileapi/logo?cct=1370578920" />
+			<!--<h1><a href="#">mobileAPI Portal</a></h1>-->
+			<p><a href="http://mobileapi.org/" rel="nofollow">mobileapi.org </a></p>
+		</div>
+		
+		<div id="menu">
+			<ul>
+				<li class="current_page_item"><a href="#" accesskey="1" title="">Home</a></li>
+				<li><a href="#" accesskey="3" title="">API</a></li>
+				<li><a href="#" accesskey="4" title="">Devices</a></li>
+				<li><a href="#" accesskey="5" title="">FAQ</a></li>
+				<li><a href="#" accesskey="5" title="">Portal</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="wrapper">
+
+		
+	<div id="page-wrapper">
+
+        <div id="logon">
+		     <a href="javascript:register();">register</a>
+			<input name="emaillogon" placeholder="admin@some.com" type="text" />
+			<input name="pwdlogon" placeholder="secret"  type="passsword"/>
+			<input type="button" id="btnLogin" name="btnLogin" value="login" />
+			<div id="lblError"></div>
+		</div>
+
+		<div id="page">
+			<div id="content">
+				<h2>Mobile API Admin Portal</h2>
+				<p>This is <strong>MobileAPI </strong>, a free notification and messaging platform for mobile devices. Source at <a href="https://code.google.com/p/mobileapi/">code.google.com/p/mobileapi/</a>.</p>
+				<p><img src="http://mobileapi.googlecode.com/svn/wiki/img/mobileAPI_HighLevel.png" alt="" class="alignleft" />
+				
+			</div>
+
+            <div id="register">
+				<h2>Register</h2>
+                Name<br />
+				<input name="name" type="text" /><br /><br />
+                Email<br />
+                <input name="email" type="text" /><br /><br />
+                Passwort<br />
+                <input name="pwd" type="password" /><br /><br />
+                Passwort Repeat<br />
+                <input name="pwdnew" type="password" /><br /><br />
+                <input type="button" id="btnRegister" name="btnRegister" value="Register" onclick="javascript:sendRegistration()"/>
+                <div id="lblErrorEmail"></div>
+			</div>
+
+            <div id="emailConfirm">
+				<p>Please check your email and confirm by clicking the provided link</p>
+			</div>
+
+			<div id="sidebar">
+				<h2>Components</h2>
+				<ul class="style1">
+					<li class="first"><a href="#">Gateway</a></li>
+					<li><a href="#">Authentication Token Service</a></li>
+					<li><a href="#">Broker</a></li>
+					<li><a href="#">API</a></li>
+					<li><a href="#">AdminPortal</a></li>
+					<li><a href="#">Health Monitor</a></li>
+				</ul>
+				<p class="button-style"><a href="#">More Details</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="footer-bg">
+	<div id="footer-content" class="container">
+		<div id="column1">
+			<h2>Recommended Links</h2>
+			<ul class="style1">
+				<li class="first"><a href="#">Pellentesque consectetuer gravida blandit.</a></li>
+
+			</ul>
+		</div>
+		<div id="column2">
+			<h2>Rhoncus volutpat</h2>
+			<ul class="style1">
+				<li class="first"><a href="#">Pellentesque consectetuer gravida blandit.</a></li>
+
+			</ul>
+		</div>
+		<div id="column3">
+			<h2>Recommended Links</h2>
+			<ul class="style1">
+				<li class="first"><a href="#">Pellentesque consectetuer gravida blandit.</a></li>
+
+			</ul>
+		</div>
+		<div id="column4">
+			<h2>Social</h2>
+			<ul class="style1">
+				<li class="first"><a href="#">Twitter</a></li>
+
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="footer" class="container">
+	<p>Copyright (c) 2013 mobileapi.org. All rights reserved. <a href="http://www.mobileapi.org/" rel="nofollow">mobileapi.org</a>. CSS template designed by <a href="http://www.freecsstemplates.org/">www.freecsstemplates.org</a></p>
+</div>
+</form>
+</body>
+
+<script>
+    var url = "c.aspx";
+    var loogedOn = false;
+
+    document.getElementById("register").style.display = 'none';
+    document.getElementById("emailConfirm").style.display = 'none';
+    document.getElementById("lblError").html = "";
+
+    function register()
+    {
+        document.getElementById("register").style.display = '';
+        document.getElementById("content").style.display = 'none';
+        document.getElementById("logon").style.display = 'none';
+        document.getElementById("lblError").html = "";
+    }
+
+    function sendRegistration() {
+
+        // validate
+        $.ajax({
+            type: "POST",
+            url: url + "?cmd=register",
+            data: $("#myform").serialize(), // serializes the form's elements.
+            error: function (jqXHR, textStatus, errorMessage) {
+                $("#lblErrorEmail").html("You can not register this email address");
+            },
+            success: function (data) {
+                var rep = jQuery.parseJSON(data);
+                if (rep.status == 'ok') {
+                    loogedOn = true;
+                    $("#lblErrorEmail").html("");
+                    $("#logon").html(rep.name + " <a href='javascript:logout()'>log out</a>");
+                    document.getElementById("register").style.display = 'none';
+                    document.getElementById("content").style.display = 'none';
+                    document.getElementById("emailConfirm").style.display = '';
+                    document.getElementById("logon").style.display = '';
+                }
+                else {
+                    $("#lblErrorEmail").html(rep.msg);
+                }
+            }
+        });
+    }
+
+    function logout()
+    {
+        loogedOn = false;
+        $.ajax({
+            type: "POST",
+            url: url + "?cmd=logut",
+            data: $("#myform").serialize(), // serializes the form's elements.
+            error: function (jqXHR, textStatus, errorMessage) {
+
+            },
+            success: function (data) {
+
+            }
+        });
+        location.href = "index.html";
+    }
+
+    $("#btnLogin").click(function () {
+        $.ajax({
+            type: "POST",
+            url: url+"?cmd=login",
+            data: $("#myform").serialize(), // serializes the form's elements.
+            error: function (jqXHR, textStatus, errorMessage) {
+                $("#lblError").html("User unknown");
+            },
+            success: function (data) {
+                var rep = jQuery.parseJSON(data);
+                if (rep.status == 'ok') {
+                    loogedOn = true;
+                    $("#lblError").html("");
+                    $("#logon").html(rep.name + " <a href='javascript:logout()'>log out</a>");
+                }
+                else {
+                    $("#lblError").html("User unknown - please try again ");
+                }
+            }
+        });
+    });
+</script>
+</html>

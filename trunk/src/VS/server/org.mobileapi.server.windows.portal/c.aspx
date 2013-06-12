@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="c.aspx.cs" Inherits="org.mobileapi.server.windows.portal.c" %>
