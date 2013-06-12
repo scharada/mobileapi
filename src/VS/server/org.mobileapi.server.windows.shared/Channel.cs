@@ -8,6 +8,12 @@ namespace org.mobileapi.server.windows.shared
 {
     public class Channel
     {
+        public BsonObjectId _id
+        {
+            set;
+            get;
+        }
+
         public Guid ID
         {
             set;
