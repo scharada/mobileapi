@@ -18,7 +18,6 @@ namespace org.mobileapi.server.windows.shared.db
     // http://docs.mongodb.org/ecosystem/tutorial/use-csharp-driver/
     public class UserService
     {
-
         private MongoClient _MongoClient;
         private MongoDatabase _DB;
         private bool _IsDBLogon;
@@ -64,13 +63,15 @@ namespace org.mobileapi.server.windows.shared.db
                 return;
             }
             MongoCollection<User> collection  = _DB.GetCollection<User>(Key.USER);
+            user.Create = DateTime.Now;
+            user.Update = user.Create;
             collection.Insert(user);
         }
 
         public void Update(User user)
         {
             MongoCollection<User> collection = _DB.GetCollection<User>(Key.USER);
-            var query = Query<User>.EQ(e => e.Email, user.Email);
+            var query = Query<User>.EQ(e => e._id, user._id);
             var userDB  = collection.FindOne(query);
             userDB.Addr0 = user.Addr0;
             userDB.Addr1 = user.Addr1;
@@ -94,7 +95,7 @@ namespace org.mobileapi.server.windows.shared.db
         public void Delete(User user )
         {
             MongoCollection<User> collection = _DB.GetCollection<User>(Key.USER);
-            var query = Query<User>.EQ(e => e.ID, user.ID);
+            var query = Query<User>.EQ(e => e._id, user._id);
             collection.Remove(query);
         }
 

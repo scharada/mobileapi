@@ -10,10 +10,12 @@ namespace org.mobileapi.server.windows.shared
     {
         public const string ADMINID = "adminid";
         public const string APPLICATIONID = "appid";
+        public const string APP = "app";
         public const string BINARY = "bin";
         public const string BODYLENGTH = "blen";
         public const string CREATED = "c";
         public const string COMPANYID = "comid";
+        public const string CONF = "conf";
         public const string CHECKSUM = "crc";
         public const string CMD = "cmd";
         public const string DB = "db";
@@ -25,6 +27,7 @@ namespace org.mobileapi.server.windows.shared
         public const string FIX = "fix";
         public const string GROUPID = "grpid";
         public const string HEADERLENGTH = "hlen";
+        public const string KEY = "key";
         public const string LASTGPSTIME = "lgpst";
         public const string LASTLOGGEDOFF = "lloff";
         public const string LASTLOGGEDON = "llon";
@@ -59,6 +62,7 @@ namespace org.mobileapi.server.windows.shared
         public const string TTL = "ttl";
         public const string USER = "user";
         public const string UPDATED = "u";
+        public const string VALUE = "val";
         public const string VERSION = "vers";
     }
 }
