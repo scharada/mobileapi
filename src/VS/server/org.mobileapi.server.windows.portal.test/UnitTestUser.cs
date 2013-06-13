@@ -12,7 +12,7 @@ namespace org.mobileapi.server.windows.portal.test
         UserService _service ;
 
         [TestMethod]
-        public void Tests()
+        public void Test_UserService()
         {
             _service = new UserService();
             TestCreate();
@@ -27,7 +27,7 @@ namespace org.mobileapi.server.windows.portal.test
         {
             _userGuid = Guid.NewGuid();
 
-            UserService service = new UserService();
+             _service = new UserService();
 
             User user = new User();
             user.ID = _userGuid;
@@ -48,7 +48,7 @@ namespace org.mobileapi.server.windows.portal.test
             user.Status = EnumUserStatus.NEW;
             user.Token = Guid.NewGuid();
             user.Update = DateTime.Now;
-            service.Create(user);
+            _service.Create(user);
         }
 
 
