@@ -24,6 +24,10 @@ namespace org.mobileapi.server.windows.shared
         public const string DEVICEID = "devid";
         public const string EMAIL = "email";
         public const string EMAILLOGON = "emailLogon";
+        public const string EMAILCONFIRMATIONLINK = "EMAILCONFIRMATIONLINK";
+        public const string EMAILCONFIRMATIONSENDER = "EMAILCONFIRMATIONSENDER";
+        public const string EMAILCONFIRMATIONSUBJECT = "EMAILCONFIRMATIONSUBJECT";
+        public const string EMAILCONFIRMATIONFILE = "EMAILCONFIRMATIONFILE";
         public const string ENCODING = "enc";
         public const string ERROR = "err";
         public const string FIX = "fix";

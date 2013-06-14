@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using org.mobileapi.server.windows.portal.code;
 using System.Web.Script.Serialization;
 using org.mobileapi.server.windows.shared;
+using System.Configuration;
 
 namespace org.mobileapi.server.windows.portal
 {
@@ -35,6 +36,10 @@ namespace org.mobileapi.server.windows.portal
 
                 if (cmd.Equals(Key.REGISTER))
                 {
+                    // Configure - this should go to Global.asa
+                    FileLoader.ServerPath = HttpContext.Current.Server.MapPath("/");
+                    Emailer.Configure(ConfigurationSettings.AppSettings[Key.MAILSERVER_HOST], Convert.ToInt32(ConfigurationSettings.AppSettings[Key.MAILSERVER_PORT]));
+
                     rep = new Register().go(Request, Response);
                     string reply = new JavaScriptSerializer().Serialize(rep);
                     Response.Write(reply);
