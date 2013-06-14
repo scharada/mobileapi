@@ -13,12 +13,14 @@ namespace org.mobileapi.server.windows.shared
         public const string APP = "app";
         public const string BINARY = "bin";
         public const string BODYLENGTH = "blen";
+        public const string CHANNEL = "channel";
         public const string CREATED = "c";
         public const string COMPANYID = "comid";
         public const string CONF = "conf";
         public const string CHECKSUM = "crc";
         public const string CMD = "cmd";
         public const string DB = "db";
+        public const string DEVICE = "device";
         public const string DEVICEID = "devid";
         public const string EMAIL = "email";
         public const string EMAILLOGON = "emailLogon";
@@ -38,6 +40,8 @@ namespace org.mobileapi.server.windows.shared
         public const string MESSAGE = "msg";
         public const string MESSAGEID = "msgid";
         public const string MONGODB_CONNSTRING = "MONGODB_CONNSTRING";
+        public const string MAILSERVER_HOST = "MAILSERVER_HOST";
+        public const string MAILSERVER_PORT = "MAILSERVER_PORT";
         public const string NAME = "name";
         public const string OBJECT = "obj";
         public const string OPCODE = "opc";

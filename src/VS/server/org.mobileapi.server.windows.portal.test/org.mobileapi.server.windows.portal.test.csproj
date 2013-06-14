@@ -51,7 +51,10 @@
   </Choose>
   <ItemGroup>
     <Compile Include="UnitTestApp.cs" />
+    <Compile Include="UnitTestChannel.cs" />
     <Compile Include="UnitTestConf.cs" />
+    <Compile Include="UnitTestDevice.cs" />
+    <Compile Include="UnitTestEmailer.cs" />
     <Compile Include="UnitTestUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
