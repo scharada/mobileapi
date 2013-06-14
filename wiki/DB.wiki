@@ -52,8 +52,7 @@
 || appID ||  guid ||
 || retries || number ||
 || ttl || number ||
-|| priority || number ||
-|| opcode || number || 
+|| priority || EnumPriority||
 || mapOut || string || 
 || mapOutType || EnumMapType|| 
 || mapIn || string || 
