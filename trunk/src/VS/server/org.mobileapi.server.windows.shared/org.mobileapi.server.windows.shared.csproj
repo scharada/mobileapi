@@ -40,6 +40,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,9 +53,12 @@
     <Compile Include="Channel.cs" />
     <Compile Include="Conf.cs" />
     <Compile Include="db\AppService.cs" />
+    <Compile Include="db\ChannelService.cs" />
     <Compile Include="db\ConfService.cs" />
+    <Compile Include="db\DeviceService.cs" />
     <Compile Include="db\UserService.cs" />
     <Compile Include="Device.cs" />
+    <Compile Include="Emailer.cs" />
     <Compile Include="EnumCountries.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Key.cs" />

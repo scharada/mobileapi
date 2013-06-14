@@ -9,6 +9,12 @@ namespace org.mobileapi.server.windows.shared
 {
     public class Channel
     {
+        public string Name
+        {
+            set;
+            get;
+        }
+
         public BsonObjectId _id
         {
             set;
@@ -39,13 +45,7 @@ namespace org.mobileapi.server.windows.shared
             get;
         }
 
-         public int Priority
-        {
-            set;
-            get;
-        }
-
-        public EnumOpcode Opcode
+        public EnumPriority Priority
         {
             set;
             get;

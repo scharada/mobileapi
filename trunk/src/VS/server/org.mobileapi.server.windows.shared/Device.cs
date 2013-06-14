@@ -22,12 +22,6 @@ namespace org.mobileapi.server.windows.shared
             get;
         }
 
-        public Guid DeviceID
-        {
-            set;
-            get;
-        }
-
         public Guid AppID
         {
             set;
