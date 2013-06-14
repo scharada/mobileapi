@@ -61,6 +61,7 @@
     <Compile Include="Emailer.cs" />
     <Compile Include="EnumCountries.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="FileLoader.cs" />
     <Compile Include="Key.cs" />
     <Compile Include="MsgLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

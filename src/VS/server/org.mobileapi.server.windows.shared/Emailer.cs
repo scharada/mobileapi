@@ -4,17 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Mail;
+using System.Configuration;
 
 namespace org.mobileapi.server.windows.shared
 {
     public class Emailer
     {
-        private string host;
-        private int port;
-        public void Configure(string host, int port)
+        private static string _host;
+        private static int _port;
+        public static void Configure(string host, int port)
         {
-            this.host = host;
-            this.port = port;
+            _host = host;
+            _port = port;
+        }
+
+        public bool SendRegistration(string to, string name, string linkParams)
+        {
+             string link = ConfigurationSettings.AppSettings[Key.EMAILCONFIRMATIONLINK];
+             string from = ConfigurationSettings.AppSettings[Key.EMAILCONFIRMATIONSENDER];
+             string subject = ConfigurationSettings.AppSettings[Key.EMAILCONFIRMATIONSUBJECT];
+             string fileName = ConfigurationSettings.AppSettings[Key.EMAILCONFIRMATIONFILE];
+
+             FileLoader f = new FileLoader();
+             string html = f.Load(fileName);
+
+            // replace
+             html = string.Format(html, name, link + linkParams);
+             return Send(from, to, subject, html);
         }
 
        public bool Send(string from, string to, string subject, string body)
@@ -23,10 +39,10 @@ namespace org.mobileapi.server.windows.shared
            {
                MailMessage mail = new MailMessage(from, to);
                SmtpClient client = new SmtpClient();
-               client.Port = 25;
+               client.Port = _port;
                client.DeliveryMethod = SmtpDeliveryMethod.Network;
                client.UseDefaultCredentials = false;
-               client.Host = host;
+               client.Host = _host;
                mail.Subject = subject;
                mail.Body = body;
                client.Send(mail);

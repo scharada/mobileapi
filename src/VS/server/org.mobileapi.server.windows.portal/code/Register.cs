@@ -47,13 +47,25 @@ namespace org.mobileapi.server.windows.portal.code
                 service.Create(user);
 
                  // send email
-                user.Status = EnumUserStatus.INVITED;
-                service.Update(user);
+                bool ok =  new Emailer().SendRegistration(email, name, "?cmd=register&token=" + user.Token + "&email=" + email);
+                if (ok)
+                {
+                    user.Status = EnumUserStatus.INVITED;
+                    service.Update(user);
 
-                 // Reply
-                rep[Key.CMD] = Key.REGISTER;
-                rep[Key.STATUS] = Key.OK;
-                service.Close();
+                    // Reply
+                    rep[Key.CMD] = Key.REGISTER;
+                    rep[Key.STATUS] = Key.OK;
+                    service.Close();
+                }
+                else
+                {
+                    
+                    // Reply
+                    rep[Key.CMD] = Key.REGISTER;
+                    rep[Key.STATUS] = Key.ERROR;
+                    service.Close();
+                }
                 return rep;
             }
             catch (FormatException)
