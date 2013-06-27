@@ -2,16 +2,10 @@
 
 == Suggested Roadmap==
 
- * Implement rapid prototype of Gateway, Broker and Portal in C Sharp , Portal Client in JQuery
+ * Implement rapid prototype of Gateway in Node.js, Broker and Portal in Java/Scala , Portal Client in JQuery
  * Build client Libraries for Windows, Android and iPhone 
  * Test on Amazon EC2 Windows
 
  * Refine Protocol and Enumerations 
 
- * Build node.js version of the Broker 
- * Build node.js/JQuery version of the Portal 
- * Build Erlang version of the Gateway 
- * Build Java version of the Monitor 
-
- * Test on Amazon EC2 Linux  with at least 2 Gateways, 1 Broker, 1 Portal, 1  Monitor 
  * Build Amazon Linux Image for single server deployment and Test
