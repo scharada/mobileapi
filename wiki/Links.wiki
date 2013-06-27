@@ -3,9 +3,17 @@
 
 = Links to other projects  =
 
-http://www.mongodb.org/
+http://zookeeper.apache.org/
 
 http://redis.io/
+
+http://www.mongodb.org/
+
+http://nginx.org/
+
+http://www.rabbitmq.com/
+
+http://nodejs.org/
 
 http://bsonspec.org/
 
@@ -13,15 +21,9 @@ http://en.wikipedia.org/wiki/Efficient_XML_Interchange
 
 https://code.google.com/p/keyczar/
 
-http://qpid.apache.org/
-
 http://xalan.apache.org/
 
-http://nginx.org/
-
 http://linuxorg/
-
-http://nodejs.org/
 
 http://www.android.com/
 
@@ -31,8 +33,6 @@ http://developer.windowsphone.com/
 
 http://aws.amazon.com/ec2/
 
-https://github.com/object/MongOData
+http://www.scala-lang.org/
 
 http://jquery.com/
-
-http://javascriptdotnet.codeplex.com
