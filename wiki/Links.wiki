@@ -38,3 +38,5 @@ http://www.scala-lang.org/
 http://jquery.com/
 
 https://glassfish.java.net/
+
+https://github.com/square/SocketRocket
