@@ -37,6 +37,8 @@ http://www.scala-lang.org/
 
 http://jquery.com/
 
-https://glassfish.java.net/
+https://glassfish.java
 
-https://github.com/square/SocketRocket
+http://akka.io
+
+http://spray.io
