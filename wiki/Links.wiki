@@ -42,4 +42,6 @@ http://www.cloudfoundry.com/
 
 https://www.openshift.com/
 
+http://www.openstack.org/
+
 http://aws.amazon.com/ec2/
