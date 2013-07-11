@@ -31,14 +31,15 @@ https://developer.apple.com/devcenter/ios/index.action
 
 http://developer.windowsphone.com/
 
-http://aws.amazon.com/ec2/
+http://angularjs.org/
 
-http://www.scala-lang.org/
-
-http://jquery.com/
+http://socket.io/
 
 https://glassfish.java
 
-http://akka.io
 
-http://spray.io
+http://www.cloudfoundry.com/
+
+https://www.openshift.com/
+
+http://aws.amazon.com/ec2/
