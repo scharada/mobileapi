@@ -8,6 +8,8 @@ import javax.jws.WebParam;
 import javax.ejb.Stateless;
 
 import org.mobileapi.server.api.interfaces.Api;
+import org.mobileapi.server.db.DBFactory;
+import com.mongodb.DB;
 
 // http://tomee.apache.org/examples-trunk/simple-webservice/
 
@@ -29,6 +31,9 @@ public class Service implements Api {
 	 @WebMethod(operationName = "ping")
 	// @WebParam(name = "i") final int i
 	public Date ping() {
+		DBFactory factory = new DBFactory();
+		DB  db = factory.get();
+		System.out.print(db);
 		return new Date();
 	}
 }
