@@ -1,2 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.mobileapi.server.api.interfaces.Api"/>
+<fullyQualifiedTypeName name="org.mobileapi.client.andorid.lib.Helper"/>
+</qualifiedTypeNameHistroy>
