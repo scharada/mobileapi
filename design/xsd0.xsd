@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:m="http://mobileapi.org" targetNamespace="http://mobileapi.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="ReadUserRequest">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="email" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReadUserResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="user" type="m:User"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SaveUserRequest">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="user" type="m:User"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SaveUserResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="xs:integer"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReadDeviceRequest">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="msisdn" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReadDeviceResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="device" type="m:Device"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReadAppRequest">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReadAppResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="app" type="m:App"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReadAppsRequest">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="userId" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReadAppsResponse">
+		<xs:complexType>
+			<xs:sequence>
+			<xs:element name="apps" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="app" type="m:App" minOccurs="1" maxOccurs="1" />
+					</xs:sequence>
+				</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReadChannelRequest">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReadChannelResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="channel" type="m:Channel"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="User">
+		<xs:sequence>
+			<xs:element name="id" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="email" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="pwd" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="givenName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="msisdn" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="addr0" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="addr1" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="city" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="postcode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="county" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="country" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="language" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="token" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="update" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="create" type="xs:date" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="App">
+		<xs:sequence>
+			<xs:element name="id" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="desc" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="lastname" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="country" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="update" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="create" type="xs:date" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Channel">
+		<xs:sequence>
+			<xs:element name="id" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="appId" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="retries" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ttl" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="priority" type="m:enumPriority" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="mapOut" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="mapOutType" type="m:enumMapType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="mapIn" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="mapInType" type="m:enumMapType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="addressType" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="addressPath" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="addressMap" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="addressPermission" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="callBackUrl" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="callBackUser" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="callBackPwd" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="update" type="xs:date" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="create" type="xs:date" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Device">
+		<xs:sequence>
+			<xs:element name="id" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="appId" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="user" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="pin" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="lat" type="xs:double" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="long" type="xs:double" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="fix" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="sat" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="GPSTime" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="status" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="token" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="update" type="xs:date" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="create" type="xs:date" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="enumAddressType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="XPATH"/>
+			<xs:enumeration value="KEYPAIR"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="enumChannelOption">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="UNRELIABLE"/>
+			<xs:enumeration value="RELIABLE"/>
+			<xs:enumeration value="REPORTED"/>
+			<xs:enumeration value="P2P_UNRELIABLE"/>
+			<xs:enumeration value="P2P_RELIABLE"/>
+			<xs:enumeration value="P2P_REPORTED"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="enumDeviceStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NEW"/>
+			<xs:enumeration value="ACTIVE"/>
+			<xs:enumeration value="BLOCKED"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="enumEncoding">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="BINARY"/>
+			<xs:enumeration value="BSON"/>
+			<xs:enumeration value="EXI"/>
+			<xs:enumeration value="ASCII"/>
+			<xs:enumeration value="UTF8"/>
+			<xs:enumeration value="UTF16"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="enumEncryption">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="KEYS"/>
+			<xs:enumeration value="CERT"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="enumMapType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="XSLT"/>
+			<xs:enumeration value="KEYPAIR"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="enumMsgStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NEW"/>
+			<xs:enumeration value="QUEUED"/>
+			<xs:enumeration value="AIR"/>
+			<xs:enumeration value="NACKED"/>
+			<xs:enumeration value="ACKED"/>
+			<xs:enumeration value="REPORT_QUEUED"/>
+			<xs:enumeration value="REPORT_AIR"/>
+			<xs:enumeration value="REPORT_NACKED"/>
+			<xs:enumeration value="REPORT_ACKED"/>
+			<xs:enumeration value="LOGGED"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="enumOpcode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="LOGON"/>
+			<xs:enumeration value="ACK"/>
+			<xs:enumeration value="NACK"/>
+			<xs:enumeration value="MSG"/>
+			<xs:enumeration value="GPS"/>
+			<xs:enumeration value="PING"/>
+			<xs:enumeration value="ECHO"/>
+			<xs:enumeration value="LOG"/>
+			<xs:enumeration value="UPDATETOKEN"/>
+			<xs:enumeration value="CHANGEGATEWAY"/>
+			<xs:enumeration value="LOGOFF"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="enumPriority">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NORMAL"/>
+			<xs:enumeration value="LOW"/>
+			<xs:enumeration value="HIGH"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="enumUserStatus">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="NEW"/>
+				<xs:enumeration value="INVITED"/>
+				<xs:enumeration value="ACTIVE"/>
+				<xs:enumeration value="BLOCKED"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:simpleType name="guid">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+                The representation of a GUID, generally the id of an element.
+            </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\})"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
