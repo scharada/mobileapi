@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions 
+
+xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" 
+xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:tns="http://mobileapi.org/wsdl" 
+xmlns:m="http://mobileapi.org" 
+targetNamespace="http://mobileapi.org/wsdl" >
+
+	<wsdl:types >	  
+	    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+	           <import namespace="http://mobileapi.org" schemaLocation="xsd0.xsd" />
+	    </schema>
+	</wsdl:types>
+	
+	<wsdl:message name="ReadUserRequest">
+			<wsdl:part name="request" element="m:ReadUserRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ReadUserResponse">
+		<wsdl:part name="response" element="m:ReadUserResponse"/>
+	</wsdl:message>
+	
+		<wsdl:message name="SaveUserRequest">
+			<wsdl:part name="request" element="m:SaveUserRequest"/>
+	</wsdl:message>
+	<wsdl:message name="SaveUserResponse">
+		<wsdl:part name="response" element="m:SaveUserResponse"/>
+	</wsdl:message>
+	
+	<wsdl:message name="ReadAppRequest">
+			<wsdl:part name="request" element="m:ReadAppRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ReadAppResponse">
+		<wsdl:part name="response" element="m:ReadAppResponse"/>
+	</wsdl:message>
+	
+		<wsdl:message name="ReadAppsRequest">
+			<wsdl:part name="request" element="m:ReadAppsRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ReadAppsResponse">
+		<wsdl:part name="response" element="m:ReadAppsResponse"/>
+	</wsdl:message>
+	
+	<wsdl:message name="ReadDeviceRequest">
+			<wsdl:part name="request" element="m:ReadDeviceRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ReadDeviceResponse">
+		<wsdl:part name="response" element="m:ReadDeviceResponse"/>
+	</wsdl:message>
+	
+		<wsdl:message name="ReadChannelRequest">
+			<wsdl:part name="request" element="m:ReadChannelRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ReadChannelResponse">
+		<wsdl:part name="response" element="m:ReadChannelResponse"/>
+	</wsdl:message>
+	
+	<wsdl:portType name="mobileAPIType">
+		<wsdl:operation name="ReadUser">
+			<wsdl:input message="tns:ReadUserRequest"/>
+			<wsdl:output message="tns:ReadUserResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="SaveUser">
+			<wsdl:input message="tns:SaveUserRequest"/>
+			<wsdl:output message="tns:SaveUserResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ReadApp">
+			<wsdl:input message="tns:ReadAppRequest"/>
+			<wsdl:output message="tns:ReadAppResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ReadApps">
+			<wsdl:input message="tns:ReadAppsRequest"/>
+			<wsdl:output message="tns:ReadAppsResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ReadDevice">
+			<wsdl:input message="tns:ReadDeviceRequest"/>
+			<wsdl:output message="tns:ReadDeviceResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ReadChannel">
+			<wsdl:input message="tns:ReadChannelRequest"/>
+			<wsdl:output message="tns:ReadChannelResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	
+	<wsdl:binding name="MobileApiPortBinding" type="tns:mobileAPIType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		
+		<wsdl:operation name="ReadUser">
+			<soap:operation soapAction="ReadUser"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="SaveUser">
+			<soap:operation soapAction="SaveUser"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="ReadApp">
+			<soap:operation soapAction="ReadApp"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="ReadApps">
+			<soap:operation soapAction="ReadApps"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="ReadDevice">
+			<soap:operation soapAction="ReadDevice"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="ReadChannel">
+			<soap:operation soapAction="ReadChannel"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		
+	</wsdl:binding>
+	<wsdl:service name="mobileAPI">
+		<wsdl:port name="mobile" binding="tns:MobileApiPortBinding">
+			<soap:address location="http://localhost:8080/mobile/Service"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
+
+
