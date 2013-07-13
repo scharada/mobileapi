@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://mobileapi.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="enumAddressType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="XPATH"/>
+			<xs:enumeration value="KEYPAIR"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="enumChannelOption">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="UNRELIABLE"/>
+			<xs:enumeration value="RELIABLE"/>
+			<xs:enumeration value="REPORTED"/>
+			<xs:enumeration value="P2P_UNRELIABLE"/>
+			<xs:enumeration value="P2P_RELIABLE"/>
+			<xs:enumeration value="P2P_REPORTED"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="enumDeviceStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NEW"/>
+			<xs:enumeration value="ACTIVE"/>
+			<xs:enumeration value="BLOCKED"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="enumEncoding">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="BINARY"/>
+			<xs:enumeration value="BSON"/>
+			<xs:enumeration value="EXI"/>
+			<xs:enumeration value="ASCII"/>
+			<xs:enumeration value="UTF8"/>
+			<xs:enumeration value="UTF16"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="enumEncryption">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="KEYS"/>
+			<xs:enumeration value="CERT"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="enumMapType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="XSLT"/>
+			<xs:enumeration value="KEYPAIR"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="enumMsgStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NEW"/>
+			<xs:enumeration value="QUEUED"/>
+			<xs:enumeration value="AIR"/>
+			<xs:enumeration value="NACKED"/>
+			<xs:enumeration value="ACKED"/>
+			<xs:enumeration value="REPORT_QUEUED"/>
+			<xs:enumeration value="REPORT_AIR"/>
+			<xs:enumeration value="REPORT_NACKED"/>
+			<xs:enumeration value="REPORT_ACKED"/>
+			<xs:enumeration value="LOGGED"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="enumOpcode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="LOGON"/>
+			<xs:enumeration value="ACK"/>
+			<xs:enumeration value="NACK"/>
+			<xs:enumeration value="MSG"/>
+			<xs:enumeration value="GPS"/>
+			<xs:enumeration value="PING"/>
+			<xs:enumeration value="ECHO"/>
+			<xs:enumeration value="LOG"/>
+			<xs:enumeration value="UPDATETOKEN"/>
+			<xs:enumeration value="CHANGEGATEWAY"/>
+			<xs:enumeration value="LOGOFF"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="enumPriority">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NORMAL"/>
+			<xs:enumeration value="LOW"/>
+			<xs:enumeration value="HIGH"/>
+		</xs:restriction>
+	</xs:simpleType>
+		<xs:simpleType name="enumUserStatus">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="NEW"/>
+				<xs:enumeration value="INVITED"/>
+				<xs:enumeration value="ACTIVE"/>
+				<xs:enumeration value="BLOCKED"/>
+			</xs:restriction>
+		</xs:simpleType>
+	<xs:simpleType name="guid">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+                The representation of a GUID, generally the id of an element.
+            </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\})"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

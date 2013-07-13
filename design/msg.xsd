@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:m="http://mobileapi.org" targetNamespace="http://mobileapi.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="types.xsd"/>
+	<xs:include schemaLocation="entity.xsd"/>
+	<xs:element name="ReadUserRequest">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="email" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReadUserResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="user" type="m:User"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SaveUserRequest">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="user" type="m:User"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SaveUserResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="xs:integer"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReadDeviceRequest">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="id" type="m:guid" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="msisdn" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReadDeviceResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="device" type="m:Device"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+		<xs:element name="ListDevicesRequest">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="appId" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ListDevicesResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="devices" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="device" type="m:Device" minOccurs="1" maxOccurs="1"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SaveDeviceRequest">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="user" type="m:Device"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SaveDeviceResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="device" type="xs:integer"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReadAppRequest">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReadAppResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="app" type="m:App"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SaveAppRequest">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="app" type="m:App"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SaveAppResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="xs:integer"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ListAppsRequest">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="userId" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ListAppsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="apps" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="app" type="m:App" minOccurs="1" maxOccurs="1"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReadChannelRequest">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="id" type="m:guid" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReadChannelResponse">
+	<xs:complexType>
+			<xs:sequence>
+				<xs:element name="channels" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="channel" type="m:Channel" minOccurs="1" maxOccurs="1"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+		<xs:element name="ListChannelsRequest">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="appId" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ListChannelsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="channel" type="m:Channel"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SaveChannelRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="channel" type="m:Channel"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SaveChannelResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="xs:integer"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RegisterUserRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="email" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RegisterUserResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="token" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="status" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ConfirmUserRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="email" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="token" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ConfirmUserResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="InitPwdUserRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="email" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="token" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="pwd" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="InitPwdUserResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LogonRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="email" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="pwd" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LogonResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="token" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="status" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
