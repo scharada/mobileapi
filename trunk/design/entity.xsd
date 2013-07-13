@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:m="http://mobileapi.org" 
+targetNamespace="http://mobileapi.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+<xs:include schemaLocation="types.xsd" />
+
+	<xs:complexType name="User">
+		<xs:sequence>
+			<xs:element name="id" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="email" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="pwd" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="givenName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="msisdn" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="addr0" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="addr1" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="city" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="postcode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="county" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="country" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="language" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="token" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="status" type="m:enumUserStatus" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="update" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="create" type="xs:date" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="App">
+		<xs:sequence>
+			<xs:element name="id" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="desc" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="lastname" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="country" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="update" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="create" type="xs:date" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Channel">
+		<xs:sequence>
+			<xs:element name="id" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="appId" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="retries" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ttl" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="priority" type="m:enumPriority" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="mapOut" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="mapOutType" type="m:enumMapType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="mapIn" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="mapInType" type="m:enumMapType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="addressType" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="addressPath" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="addressMap" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="addressPermission" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="callBackUrl" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="callBackUser" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="callBackPwd" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="update" type="xs:date" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="create" type="xs:date" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Device">
+		<xs:sequence>
+			<xs:element name="id" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="appId" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="user" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="pin" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="lat" type="xs:double" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="long" type="xs:double" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="fix" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="sat" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="GPSTime" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="status" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="token" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="update" type="xs:date" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="create" type="xs:date" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

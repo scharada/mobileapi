@@ -1,66 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wsdl:definitions 
-
-xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
-xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
-xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" 
-xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
-xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" 
-xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-xmlns:tns="http://mobileapi.org/wsdl" 
-xmlns:m="http://mobileapi.org" 
-targetNamespace="http://mobileapi.org/wsdl" >
-
-	<wsdl:types >	  
-	    <schema xmlns="http://www.w3.org/2001/XMLSchema">
-	           <import namespace="http://mobileapi.org" schemaLocation="xsd0.xsd" />
-	    </schema>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://mobileapi.org/wsdl" xmlns:m="http://mobileapi.org" targetNamespace="http://mobileapi.org/wsdl">
+	<wsdl:types>
+		<schema xmlns="http://www.w3.org/2001/XMLSchema">
+			<import namespace="http://mobileapi.org" schemaLocation="msg.xsd"/>
+		</schema>
 	</wsdl:types>
-	
 	<wsdl:message name="ReadUserRequest">
-			<wsdl:part name="request" element="m:ReadUserRequest"/>
+		<wsdl:part name="request" element="m:ReadUserRequest"/>
 	</wsdl:message>
 	<wsdl:message name="ReadUserResponse">
 		<wsdl:part name="response" element="m:ReadUserResponse"/>
 	</wsdl:message>
-	
-		<wsdl:message name="SaveUserRequest">
-			<wsdl:part name="request" element="m:SaveUserRequest"/>
+	<wsdl:message name="SaveUserRequest">
+		<wsdl:part name="request" element="m:SaveUserRequest"/>
 	</wsdl:message>
 	<wsdl:message name="SaveUserResponse">
 		<wsdl:part name="response" element="m:SaveUserResponse"/>
 	</wsdl:message>
-	
 	<wsdl:message name="ReadAppRequest">
-			<wsdl:part name="request" element="m:ReadAppRequest"/>
+		<wsdl:part name="request" element="m:ReadAppRequest"/>
 	</wsdl:message>
 	<wsdl:message name="ReadAppResponse">
 		<wsdl:part name="response" element="m:ReadAppResponse"/>
 	</wsdl:message>
-	
-		<wsdl:message name="ReadAppsRequest">
-			<wsdl:part name="request" element="m:ReadAppsRequest"/>
+	<wsdl:message name="SaveAppRequest">
+		<wsdl:part name="request" element="m:SaveAppRequest"/>
 	</wsdl:message>
-	<wsdl:message name="ReadAppsResponse">
-		<wsdl:part name="response" element="m:ReadAppsResponse"/>
+	<wsdl:message name="SaveAppResponse">
+		<wsdl:part name="response" element="m:SaveAppResponse"/>
 	</wsdl:message>
-	
+	<wsdl:message name="ListAppsRequest">
+		<wsdl:part name="request" element="m:ListAppsRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ListAppsResponse">
+		<wsdl:part name="response" element="m:ListAppsResponse"/>
+	</wsdl:message>
 	<wsdl:message name="ReadDeviceRequest">
-			<wsdl:part name="request" element="m:ReadDeviceRequest"/>
+		<wsdl:part name="request" element="m:ReadDeviceRequest"/>
 	</wsdl:message>
 	<wsdl:message name="ReadDeviceResponse">
 		<wsdl:part name="response" element="m:ReadDeviceResponse"/>
 	</wsdl:message>
-	
-		<wsdl:message name="ReadChannelRequest">
-			<wsdl:part name="request" element="m:ReadChannelRequest"/>
+		<wsdl:message name="ListDevicesRequest">
+		<wsdl:part name="request" element="m:ListDevicesRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ListDevicesResponse">
+		<wsdl:part name="response" element="m:ListDevicesResponse"/>
+	</wsdl:message>
+	<wsdl:message name="SaveDeviceRequest">
+		<wsdl:part name="request" element="m:SaveDeviceRequest"/>
+	</wsdl:message>
+	<wsdl:message name="SaveDeviceResponse">
+		<wsdl:part name="response" element="m:SaveDeviceResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ReadChannelRequest">
+		<wsdl:part name="request" element="m:ReadChannelRequest"/>
 	</wsdl:message>
 	<wsdl:message name="ReadChannelResponse">
 		<wsdl:part name="response" element="m:ReadChannelResponse"/>
 	</wsdl:message>
-	
+		<wsdl:message name="ListChannelsRequest">
+		<wsdl:part name="request" element="m:ListChannelsRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ListChannelsResponse">
+		<wsdl:part name="response" element="m:ListChannelsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="SaveChannelRequest">
+		<wsdl:part name="request" element="m:SaveChannelRequest"/>
+	</wsdl:message>
+	<wsdl:message name="SaveChannelResponse">
+		<wsdl:part name="response" element="m:SaveChannelResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RegisterUserRequest">
+		<wsdl:part name="request" element="m:RegisterUserRequest"/>
+	</wsdl:message>
+	<wsdl:message name="RegisterUserResponse">
+		<wsdl:part name="response" element="m:RegisterUserResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ConfirmUserRequest">
+		<wsdl:part name="request" element="m:ConfirmUserRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ConfirmUserResponse">
+		<wsdl:part name="response" element="m:ConfirmUserResponse"/>
+	</wsdl:message>
+	<wsdl:message name="InitPwdUserRequest">
+		<wsdl:part name="request" element="m:InitPwdUserRequest"/>
+	</wsdl:message>
+	<wsdl:message name="InitPwdUserResponse">
+		<wsdl:part name="response" element="m:InitPwdUserResponse"/>
+	</wsdl:message>
+	<wsdl:message name="LogonRequest">
+		<wsdl:part name="request" element="m:LogonRequest"/>
+	</wsdl:message>
+	<wsdl:message name="LogonResponse">
+		<wsdl:part name="response" element="m:LogonResponse"/>
+	</wsdl:message>
 	<wsdl:portType name="mobileAPIType">
 		<wsdl:operation name="ReadUser">
 			<wsdl:input message="tns:ReadUserRequest"/>
@@ -74,23 +108,57 @@ targetNamespace="http://mobileapi.org/wsdl" >
 			<wsdl:input message="tns:ReadAppRequest"/>
 			<wsdl:output message="tns:ReadAppResponse"/>
 		</wsdl:operation>
-		<wsdl:operation name="ReadApps">
-			<wsdl:input message="tns:ReadAppsRequest"/>
-			<wsdl:output message="tns:ReadAppsResponse"/>
+		<wsdl:operation name="SaveApp">
+			<wsdl:input message="tns:SaveAppRequest"/>
+			<wsdl:output message="tns:SaveAppResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ListApps">
+			<wsdl:input message="tns:ListAppsRequest"/>
+			<wsdl:output message="tns:ListAppsResponse"/>
 		</wsdl:operation>
 		<wsdl:operation name="ReadDevice">
 			<wsdl:input message="tns:ReadDeviceRequest"/>
 			<wsdl:output message="tns:ReadDeviceResponse"/>
 		</wsdl:operation>
+				<wsdl:operation name="ListDevices">
+			<wsdl:input message="tns:ListDevicesRequest"/>
+			<wsdl:output message="tns:ListDevicesResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="SaveDevice">
+			<wsdl:input message="tns:SaveDeviceRequest"/>
+			<wsdl:output message="tns:SaveDeviceResponse"/>
+		</wsdl:operation>
 		<wsdl:operation name="ReadChannel">
 			<wsdl:input message="tns:ReadChannelRequest"/>
 			<wsdl:output message="tns:ReadChannelResponse"/>
 		</wsdl:operation>
+				<wsdl:operation name="ListChannels">
+			<wsdl:input message="tns:ListChannelsRequest"/>
+			<wsdl:output message="tns:ListChannelsResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="SaveChannel">
+			<wsdl:input message="tns:SaveChannelRequest"/>
+			<wsdl:output message="tns:SaveChannelResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RegisterUser">
+			<wsdl:input message="tns:RegisterUserRequest"/>
+			<wsdl:output message="tns:RegisterUserResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ConfirmUser">
+			<wsdl:input message="tns:ConfirmUserRequest"/>
+			<wsdl:output message="tns:ConfirmUserResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="InitPwdUser">
+			<wsdl:input message="tns:InitPwdUserRequest"/>
+			<wsdl:output message="tns:InitPwdUserResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="Logon">
+			<wsdl:input message="tns:LogonRequest"/>
+			<wsdl:output message="tns:LogonResponse"/>
+		</wsdl:operation>
 	</wsdl:portType>
-	
 	<wsdl:binding name="MobileApiPortBinding" type="tns:mobileAPIType">
 		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
-		
 		<wsdl:operation name="ReadUser">
 			<soap:operation soapAction="ReadUser"/>
 			<wsdl:input>
@@ -100,7 +168,6 @@ targetNamespace="http://mobileapi.org/wsdl" >
 				<soap:body use="literal"/>
 			</wsdl:output>
 		</wsdl:operation>
-		
 		<wsdl:operation name="SaveUser">
 			<soap:operation soapAction="SaveUser"/>
 			<wsdl:input>
@@ -110,7 +177,6 @@ targetNamespace="http://mobileapi.org/wsdl" >
 				<soap:body use="literal"/>
 			</wsdl:output>
 		</wsdl:operation>
-		
 		<wsdl:operation name="ReadApp">
 			<soap:operation soapAction="ReadApp"/>
 			<wsdl:input>
@@ -120,9 +186,8 @@ targetNamespace="http://mobileapi.org/wsdl" >
 				<soap:body use="literal"/>
 			</wsdl:output>
 		</wsdl:operation>
-		
-		<wsdl:operation name="ReadApps">
-			<soap:operation soapAction="ReadApps"/>
+		<wsdl:operation name="SaveApp">
+			<soap:operation soapAction="SaveApp"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -130,7 +195,15 @@ targetNamespace="http://mobileapi.org/wsdl" >
 				<soap:body use="literal"/>
 			</wsdl:output>
 		</wsdl:operation>
-		
+		<wsdl:operation name="ListApps">
+			<soap:operation soapAction="ListApps"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
 		<wsdl:operation name="ReadDevice">
 			<soap:operation soapAction="ReadDevice"/>
 			<wsdl:input>
@@ -140,7 +213,24 @@ targetNamespace="http://mobileapi.org/wsdl" >
 				<soap:body use="literal"/>
 			</wsdl:output>
 		</wsdl:operation>
-		
+				<wsdl:operation name="ListDevices">
+			<soap:operation soapAction="ListDevices"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SaveDevice">
+			<soap:operation soapAction="SaveDevice"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
 		<wsdl:operation name="ReadChannel">
 			<soap:operation soapAction="ReadChannel"/>
 			<wsdl:input>
@@ -150,7 +240,60 @@ targetNamespace="http://mobileapi.org/wsdl" >
 				<soap:body use="literal"/>
 			</wsdl:output>
 		</wsdl:operation>
-		
+				<wsdl:operation name="ListChannels">
+			<soap:operation soapAction="ListChannels"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SaveChannel">
+			<soap:operation soapAction="SaveChannel"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RegisterUser">
+			<soap:operation soapAction="RegisterUser"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ConfirmUser">
+			<soap:operation soapAction="ConfirmUser"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="InitPwdUser">
+			<soap:operation soapAction="InitPwdUser"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="Logon">
+			<soap:operation soapAction="Logon"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
 	</wsdl:binding>
 	<wsdl:service name="mobileAPI">
 		<wsdl:port name="mobile" binding="tns:MobileApiPortBinding">
@@ -158,5 +301,3 @@ targetNamespace="http://mobileapi.org/wsdl" >
 		</wsdl:port>
 	</wsdl:service>
 </wsdl:definitions>
-
-
