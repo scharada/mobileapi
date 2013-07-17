@@ -16,6 +16,10 @@ http://nodejs.org/
 == Queues ==
 http://www.rabbitmq.com/
 
+http://www.rabbitmq.com/java-client.html
+
+https://nodejsmodules.org/pkg/rabbit.js
+
 == WebClient Libraries ==
 http://angularjs.org/
 
