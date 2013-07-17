@@ -28,13 +28,11 @@ https://github.com/square/SocketRocket
 
 
 == Parser ==
-http://bsonspec.org/
-
-http://en.wikipedia.org/wiki/Efficient_XML_Interchange
-
 http://xalan.apache.org/
 
-== Cloud Hosting==
+https://code.google.com/p/google-gson/
+
+== Cloud Hosting ==
 http://www.cloudfoundry.com/
 
 https://www.openshift.com/
@@ -42,3 +40,8 @@ https://www.openshift.com/
 http://www.openstack.org/
 
 http://aws.amazon.com/ec2/
+
+== Protocol ==
+http://bsonspec.org/
+
+http://en.wikipedia.org/wiki/Efficient_XML_Interchange
