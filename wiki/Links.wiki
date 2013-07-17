@@ -3,46 +3,33 @@
 
 = Links to other projects  =
 
-http://zookeeper.apache.org/
-
+== DataStore ==
 http://redis.io/
-
 http://www.mongodb.org/
 
-http://nginx.org/
-
-http://www.rabbitmq.com/
-
+== web - app server ==
+https://glassfish.java
 http://nodejs.org/
 
-http://bsonspec.org/
+== Queues ==
+http://www.rabbitmq.com/
 
-http://en.wikipedia.org/wiki/Efficient_XML_Interchange
-
-https://code.google.com/p/keyczar/
-
-http://xalan.apache.org/
-
-http://linuxorg/
-
-http://www.android.com/
-
-https://developer.apple.com/devcenter/ios/index.action
-
-http://developer.windowsphone.com/
-
+== WebClient Libraries ==
 http://angularjs.org/
-
 http://socket.io/
 
-https://glassfish.java
+== Mobile Client Libraries ==
+https://github.com/koush/AndroidAsync
+https://github.com/square/SocketRocket
 
-https://github.com/webrocket/webrocket
 
+== Parser ==
+http://bsonspec.org/
+http://en.wikipedia.org/wiki/Efficient_XML_Interchange
+http://xalan.apache.org/
+
+== Cloud Hosting==
 http://www.cloudfoundry.com/
-
 https://www.openshift.com/
-
 http://www.openstack.org/
-
 http://aws.amazon.com/ec2/
