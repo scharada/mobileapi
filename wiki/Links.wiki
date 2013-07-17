@@ -6,6 +6,10 @@
 == DataStore ==
 http://redis.io/
 
+https://github.com/xetorthio/jedis
+
+https://github.com/mranney/node_redis
+
 http://www.mongodb.org/
 
 == web - app server ==
