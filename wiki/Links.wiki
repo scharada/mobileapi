@@ -5,10 +5,12 @@
 
 == DataStore ==
 http://redis.io/
+
 http://www.mongodb.org/
 
 == web - app server ==
 https://glassfish.java
+
 http://nodejs.org/
 
 == Queues ==
@@ -16,20 +18,27 @@ http://www.rabbitmq.com/
 
 == WebClient Libraries ==
 http://angularjs.org/
+
 http://socket.io/
 
 == Mobile Client Libraries ==
 https://github.com/koush/AndroidAsync
+
 https://github.com/square/SocketRocket
 
 
 == Parser ==
 http://bsonspec.org/
+
 http://en.wikipedia.org/wiki/Efficient_XML_Interchange
+
 http://xalan.apache.org/
 
 == Cloud Hosting==
 http://www.cloudfoundry.com/
+
 https://www.openshift.com/
+
 http://www.openstack.org/
+
 http://aws.amazon.com/ec2/
