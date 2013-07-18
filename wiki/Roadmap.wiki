@@ -3,7 +3,9 @@
 == Suggested Roadmap ==
 
  * Implement rapid prototype of Gateway based on Socket.io on Node.js.
+
  * Broker and Portal in J2EE on Glassfish
+
  * Portal Client in AngularJS
 
  * Build client Libraries for Windows, Android and iPhone  and JavaScript 
