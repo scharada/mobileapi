@@ -23,11 +23,16 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock x:Name="ApplicationTitle" Text="mobileAPI" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="mobileAPI" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="PageTitle" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Text="chat"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
+        <Grid x:Name="ContentPanel" Margin="10,151,14,10" Grid.RowSpan="2">
+            <Button x:Name="btnSend" Content="send" HorizontalAlignment="Left" Margin="341,23,0,0" VerticalAlignment="Top" Click="btnSend_Click"/>
+            <TextBlock x:Name="tbxBlock" HorizontalAlignment="Left" Margin="10,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="436" Height="497"/>
+        </Grid>
+        <Button x:Name="btnClear" Content="clear" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.217,0.778" Grid.Row="1" Click="btnClear_Click_1"/>
+        <TextBox x:Name="tbxMsg" HorizontalAlignment="Left" Height="72" Margin="10,111,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="Hello From Win" VerticalAlignment="Top" Width="456"/>
     </Grid>
- 
+
 </phone:PhoneApplicationPage>
