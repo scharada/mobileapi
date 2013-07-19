@@ -17,21 +17,56 @@ using Microsoft.Phone.Shell;
 
 namespace org.mobileapi.client.windows.example
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class MainPage : PhoneApplicationPage, MsgListener
     {
         API api;
+        String messages =  "";
+
         // Constructor
         public MainPage()
         {
-            this.
+
             InitializeComponent();
 
             var settings = IsolatedStorageSettings.ApplicationSettings;
-            api = new API();
+            api = new API(this);
             api.Configure("ws://etiamo.com:8080/org.mobileapi.server.api/portal");
             api.start();
         }
 
+        public void addMessage(String msg)
+        {
+            messages = msg + Environment.NewLine +  messages;
+            
+        }
 
+        void Refresh()
+        {
+            tbxBlock.Text = messages;
+        }
+
+
+
+        private void btnClear_Click_1(object sender, RoutedEventArgs e)
+        {
+            messages = "";
+            Refresh();
+        }
+
+        private void btnSend_Click(object sender, RoutedEventArgs e)
+        {
+            api.Send(tbxMsg.Text);
+        }
+
+
+
+        public void OnMessage(string msg)
+        {
+            addMessage(msg);
+            Dispatcher.BeginInvoke(() =>
+            {
+                Refresh();
+            });
+        }
     }
 }
