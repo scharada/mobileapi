@@ -1,0 +1,1 @@
+wsimport -p org.mobileapi.server.entity mobileapi.wsdl -keep -d .
