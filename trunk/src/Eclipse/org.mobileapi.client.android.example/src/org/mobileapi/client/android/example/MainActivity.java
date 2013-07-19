@@ -1,10 +1,19 @@
 package org.mobileapi.client.android.example;
 
 import java.net.URI;
+import java.security.GeneralSecurityException;
 import java.util.Arrays;
 import java.util.List;
+
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.X509TrustManager;
+import javax.net.ssl.TrustManager;
+
 import org.apache.http.message.BasicNameValuePair;
+
 import com.codebutler.android_websockets.WebSocketClient;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
@@ -29,7 +38,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 		
 		// allow all SSL Certs from server
-		setSecurityManager()
+        setSecurityManager();
 		
 		// start websocket
         start();
@@ -51,20 +60,25 @@ public class MainActivity extends Activity {
         return true;
     }
 	
-		// Create a trust manager that does not validate certificate chains
-		TrustManager[] trustAllCerts = new TrustManager[] { 
-			new X509TrustManager() {     
-				public java.security.cert.X509Certificate[] getAcceptedIssuers() { 
-					return null;
-				} 
-				public void checkClientTrusted( 
-					java.security.cert.X509Certificate[] certs, String authType) {
-					} 
-				public void checkServerTrusted( 
-					java.security.cert.X509Certificate[] certs, String authType) {
-				}
+	// Create a trust manager that does not validate certificate chains
+	TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {     
+			
+		@Override
+			public java.security.cert.X509Certificate[] getAcceptedIssuers() { 
+				return null;
 			} 
-		}; 
+			
+			@Override
+			public void checkClientTrusted( 
+				java.security.cert.X509Certificate[] certs, String authType) {
+				} 
+			
+			@Override
+			public void checkServerTrusted( 
+				java.security.cert.X509Certificate[] certs, String authType) {
+			}
+		} 
+	}; 
 		
 	private void setSecurityManager()
 	{
@@ -76,7 +90,7 @@ public class MainActivity extends Activity {
 		} 
 		catch (GeneralSecurityException e) 
 		{
-			Log.error(TAG, e);
+			Log.e(TAG, e.getMessage());
 		}
 	}
     
