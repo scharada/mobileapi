@@ -15,6 +15,14 @@ namespace org.mobileapi.client.windows.lib
         private String m_uri;
 
         private WebSocket websocket;
+        private MsgListener listener;
+
+        public API(MsgListener listener)
+        {
+            this.listener = listener;
+        }
+
+
 
         public void Configure(String uri)
         {
@@ -35,6 +43,7 @@ namespace org.mobileapi.client.windows.lib
         void websocket_MessageReceived(object sender, MessageReceivedEventArgs e)
         {
             Console.WriteLine("websocket_MessageReceived");
+            listener.OnMessage(e.Message);
         }
 
         void websocket_Closed(object sender, EventArgs e)
