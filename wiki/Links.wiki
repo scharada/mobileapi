@@ -30,7 +30,7 @@ http://angularjs.org/
 http://socket.io/
 
 == Mobile Client Libraries ==
-https://github.com/koush/AndroidAsync
+https://github.com/codebutler/android-websockets
 
 https://github.com/square/SocketRocket
 
