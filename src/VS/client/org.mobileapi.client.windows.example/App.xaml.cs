@@ -63,6 +63,7 @@ namespace org.mobileapi.client.windows.example
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+
         }
 
         // Code to execute when the application is activated (brought to foreground)
@@ -102,6 +103,8 @@ namespace org.mobileapi.client.windows.example
                 System.Diagnostics.Debugger.Break();
             }
         }
+
+
 
         #region Phone application initialization
 
