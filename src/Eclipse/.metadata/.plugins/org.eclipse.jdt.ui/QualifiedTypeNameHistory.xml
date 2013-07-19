@@ -13,4 +13,9 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="org.apache.http.message.BasicNameValuePair"/>
+<fullyQualifiedTypeName name="javax.net.ssl.SSLContext"/>
+<fullyQualifiedTypeName name="javax.net.ssl.HttpsURLConnection"/>
+<fullyQualifiedTypeName name="java.security.GeneralSecurityException"/>
+<fullyQualifiedTypeName name="javax.net.ssl.TrustManager"/>
+<fullyQualifiedTypeName name="javax.net.ssl.X509TrustManager"/>
 </qualifiedTypeNameHistroy>
