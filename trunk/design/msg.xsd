@@ -14,6 +14,8 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="user" type="m:User"/>
+				<xs:element name="status" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="statusMsg" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -27,7 +29,8 @@
 	<xs:element name="SaveUserResponse">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="status" type="xs:integer"/>
+				<xs:element name="status" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="statusMsg" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -43,10 +46,12 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="device" type="m:Device"/>
+				<xs:element name="status" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="statusMsg" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-		<xs:element name="ListDevicesRequest">
+	<xs:element name="ListDevicesRequest">
 		<xs:complexType>
 			<xs:choice>
 				<xs:element name="appId" type="m:guid" minOccurs="1" maxOccurs="1"/>
@@ -63,6 +68,8 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
+				<xs:element name="status" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="statusMsg" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -77,6 +84,8 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="device" type="xs:integer"/>
+				<xs:element name="status" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="statusMsg" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -92,6 +101,8 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="app" type="m:App"/>
+				<xs:element name="status" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="statusMsg" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -105,7 +116,8 @@
 	<xs:element name="SaveAppResponse">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="status" type="xs:integer"/>
+				<xs:element name="status" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="statusMsg" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -126,6 +138,8 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
+				<xs:element name="status" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="statusMsg" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -138,19 +152,15 @@
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="ReadChannelResponse">
-	<xs:complexType>
+		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="channels" minOccurs="0" maxOccurs="unbounded">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="channel" type="m:Channel" minOccurs="1" maxOccurs="1"/>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
+				<xs:element name="channel" type="m:Channel" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="status" type="xs:integer"/>
+				<xs:element name="statusMsg" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-		<xs:element name="ListChannelsRequest">
+	<xs:element name="ListChannelsRequest">
 		<xs:complexType>
 			<xs:choice>
 				<xs:element name="appId" type="m:guid" minOccurs="1" maxOccurs="1"/>
@@ -160,7 +170,15 @@
 	<xs:element name="ListChannelsResponse">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="channel" type="m:Channel"/>
+				<xs:element name="channels" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="channel" type="m:Channel" minOccurs="1" maxOccurs="1"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="status" type="xs:integer"/>
+				<xs:element name="statusMsg" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -175,6 +193,7 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="status" type="xs:integer"/>
+				<xs:element name="statusMsg" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -190,6 +209,7 @@
 			<xs:sequence>
 				<xs:element name="token" type="xs:string" minOccurs="1" maxOccurs="1"/>
 				<xs:element name="status" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="statusMsg" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -205,6 +225,7 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="status" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="statusMsg" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -221,6 +242,7 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="status" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="statusMsg" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -237,6 +259,7 @@
 			<xs:sequence>
 				<xs:element name="token" type="xs:string" minOccurs="1" maxOccurs="1"/>
 				<xs:element name="status" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="statusMsg" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

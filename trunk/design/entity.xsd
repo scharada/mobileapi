@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:m="http://mobileapi.org" 
-targetNamespace="http://mobileapi.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
-
-<xs:include schemaLocation="types.xsd" />
-
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:m="http://mobileapi.org" targetNamespace="http://mobileapi.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="types.xsd"/>
 	<xs:complexType name="User">
 		<xs:sequence>
-			<xs:element name="id" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="userId" type="m:guid" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="email" type="xs:string" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="pwd" type="xs:string" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
@@ -20,6 +17,7 @@ targetNamespace="http://mobileapi.org" elementFormDefault="qualified" attributeF
 			<xs:element name="country" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="language" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="token" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="type" type="m:enumUserType" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="status" type="m:enumUserStatus" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="update" type="xs:date" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="create" type="xs:date" minOccurs="0" maxOccurs="1"/>
@@ -27,18 +25,17 @@ targetNamespace="http://mobileapi.org" elementFormDefault="qualified" attributeF
 	</xs:complexType>
 	<xs:complexType name="App">
 		<xs:sequence>
-			<xs:element name="id" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="appId" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="userId" type="m:guid" minOccurs="1" maxOccurs="unbounded"/>
 			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="desc" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="lastname" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="country" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="update" type="xs:date" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="create" type="xs:date" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="Channel">
 		<xs:sequence>
-			<xs:element name="id" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="channelId" type="m:guid" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="appId" type="m:guid" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="retries" type="xs:integer" minOccurs="1" maxOccurs="1"/>
@@ -48,7 +45,7 @@ targetNamespace="http://mobileapi.org" elementFormDefault="qualified" attributeF
 			<xs:element name="mapOutType" type="m:enumMapType" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="mapIn" type="xs:integer" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="mapInType" type="m:enumMapType" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="addressType" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="addressType" type="m:enumAddressType" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="addressPath" type="xs:integer" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="addressMap" type="xs:integer" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="addressPermission" type="xs:integer" minOccurs="0" maxOccurs="1"/>
@@ -61,10 +58,12 @@ targetNamespace="http://mobileapi.org" elementFormDefault="qualified" attributeF
 	</xs:complexType>
 	<xs:complexType name="Device">
 		<xs:sequence>
-			<xs:element name="id" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="deviceId" type="m:guid" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="appId" type="m:guid" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="user" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="userId" type="m:guid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="username" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="pin" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="make" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="lat" type="xs:double" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="long" type="xs:double" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="fix" type="xs:integer" minOccurs="0" maxOccurs="1"/>
@@ -76,5 +75,4 @@ targetNamespace="http://mobileapi.org" elementFormDefault="qualified" attributeF
 			<xs:element name="create" type="xs:date" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
-
 </xs:schema>
