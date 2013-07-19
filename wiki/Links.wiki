@@ -34,7 +34,7 @@ https://github.com/koush/AndroidAsync
 
 https://github.com/square/SocketRocket
 
-http://socketio4net.codeplex.com/
+http://websocket4net.codeplex.com/downloads/get/454203
 
 
 == Parser ==
