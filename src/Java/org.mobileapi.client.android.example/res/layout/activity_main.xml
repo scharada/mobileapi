@@ -8,9 +8,51 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
+    <EditText
+        android:id="@+id/tbxMessages"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnClear"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:enabled="true"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:scrollHorizontally="true" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tbxMessages"
+        android:layout_alignRight="@+id/tbxMessages"
+        android:onClick="onSend"
+        android:text="send" />
+
+    <EditText
+        android:id="@+id/tbxMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/btnSend"
+        android:ems="10"
+        android:padding="0px"
+        android:text="Hello from Android" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tbxMsg"
+        android:layout_below="@+id/tbxMsg"
+        android:onClick="onClear"
+        android:text="clear" />
 
 </RelativeLayout>
