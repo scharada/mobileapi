@@ -20,7 +20,9 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity implements Listener {
 	
-	public static final String GATEWAY = "ws://gate.mobileapi.org:8080/org.mobileapi.server.api/portal";
+	//public static final String GATEWAY = "ws://gate.mobileapi.org:8080/org.mobileapi.server.api/portal";
+	
+	public static final String GATEWAY = "ws://gate.mobileapi.org";
 	
 	private String TAG = "MainActivity";
 	private static Handler mHandler;

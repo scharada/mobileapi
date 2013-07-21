@@ -23,7 +23,6 @@ namespace org.mobileapi.client.windows.lib
         }
 
 
-
         public void Configure(String uri)
         {
             m_uri = uri;
@@ -70,7 +69,7 @@ namespace org.mobileapi.client.windows.lib
 
         public void Send(String msg)
         {
-            websocket.Send(msg); 
+          websocket.Send(msg); 
         }
 
     }

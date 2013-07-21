@@ -19,6 +19,11 @@ namespace org.mobileapi.client.windows.example
 {
     public partial class MainPage : PhoneApplicationPage, MsgListener
     {
+
+        //public const String GATEWAY = "ws://gate.mobileapi.org:8080/org.mobileapi.server.api/portal";
+
+        public const String GATEWAY = "ws://gate.mobileapi.org";
+
         API api;
         String messages =  "";
 
@@ -30,7 +35,7 @@ namespace org.mobileapi.client.windows.example
 
             var settings = IsolatedStorageSettings.ApplicationSettings;
             api = new API(this);
-            api.Configure("ws://etiamo.com:8080/org.mobileapi.server.api/portal");
+            api.Configure(GATEWAY);
             api.start();
         }
 
