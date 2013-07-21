@@ -15,5 +15,10 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="E:/MobileAPI/src/Java/lib/gson-2.2.4.jar"/>
 	<classpathentry kind="lib" path="E:/MobileAPI/src/Java/lib/mongo-2.10.1.jar"/>
+	<classpathentry kind="lib" path="E:/MobileAPI/src/Java/lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="E:/MobileAPI/src/Java/lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="E:/MobileAPI/src/Java/lib/zookeeper-3.4.5.jar"/>
+	<classpathentry kind="lib" path="E:/MobileAPI/src/Java/lib/rabbitmq-client.jar"/>
+	<classpathentry kind="lib" path="E:/MobileAPI/src/Java/lib/slf4j-log4j12-1.6.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
