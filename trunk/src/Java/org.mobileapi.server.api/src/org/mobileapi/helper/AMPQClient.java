@@ -7,6 +7,7 @@ import javax.annotation.PreDestroy;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Connection;
@@ -17,8 +18,9 @@ import com.rabbitmq.client.DefaultConsumer;
 import com.rabbitmq.client.Envelope;
 
 // http://www.rabbitmq.com/api-guide.html
+
+@Named
 @Singleton
-@Startup
 public class AMPQClient  extends Thread {
 
 	private Connection _conn;
@@ -28,8 +30,8 @@ public class AMPQClient  extends Thread {
 	@Inject
 	private Zoo _zoo;
 	
-	@PostConstruct
-	public void connect()
+
+	public void startup()
 	{
 		ConnectionFactory factory = new ConnectionFactory();
 		try {
@@ -138,7 +140,6 @@ public class AMPQClient  extends Thread {
 		}
 	}
 	
-	@PreDestroy
 	private void shutdown() {
 		System.out.println("AMPQ Client shutdown : " );
 		try {
