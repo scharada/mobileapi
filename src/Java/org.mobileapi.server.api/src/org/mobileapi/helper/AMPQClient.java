@@ -19,45 +19,52 @@ import com.rabbitmq.client.Envelope;
 
 // http://www.rabbitmq.com/api-guide.html
 
-@Named
-@Singleton
 public class AMPQClient  extends Thread {
 
 	private Connection _conn;
 	private Channel _channel;
 	private Channel _channelReceive;
 	
-	@Inject
-	private Zoo _zoo;
-	
+	private String host = "localhost";
+	private int port = 5672;
+	private String vhost = "/";
+	private String username ="guest";
+	private String pwd = "guest";
 
+	public void configure( String host, int port, String vhost, String username, String pwd)
+	{
+		this.host = host;
+		this.port = port;
+		this.vhost = vhost;
+		this.username = username;
+		this.pwd = pwd;
+	}
+	
 	public void startup()
 	{
 		ConnectionFactory factory = new ConnectionFactory();
 		try {
-		factory.setUsername("guest");
-		factory.setPassword("guest");
-		factory.setVirtualHost("/");
-		factory.setHost("localhost");
-		factory.setPort(5672);
-		_conn = factory.newConnection();
-		 _channel = _conn.createChannel();
-		System.out.println("_conn "  + _conn);
+			factory.setUsername(username);
+			factory.setPassword(pwd);
+			factory.setVirtualHost(vhost);
+			factory.setHost(host);
+			factory.setPort(port);
 		
-		// send test message
-		send("broker0","Test Message1");		
-		send("broker0","Test Message2");		
-		send("broker0","Test Message3");		
-		System.out.println("Test Message send to broker0");
+			_conn = factory.newConnection();
+			_channel = _conn.createChannel();
+			System.out.println("_conn "  + _conn);
+			
+			// send test message
+			send("broker0","Test Message1");		
+			send("broker0","Test Message2");		
+			send("broker0","Test Message3");		
+			System.out.println("Test Message send to broker0");
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 	   start();
 	}
 	

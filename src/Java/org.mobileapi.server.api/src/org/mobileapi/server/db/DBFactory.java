@@ -14,14 +14,25 @@ import java.net.UnknownHostException;
 import java.util.Arrays;
 
 public class DBFactory {
+	
+	private static String _server = "localhost";
+	private static int _port = 27017;
+	private static String _collection = "mobileapi";
+	
+	public static synchronized void configure(String server, int port, String collection)
+	{
+		_server = server;
+		_port = port;
+		_collection = collection;
+	}
 
-	public DB get()
+	public synchronized static DB get()
 	{
 		MongoClient mongoClient;
 		DB db = null;
 		try {
-			mongoClient = new MongoClient("localhost" , 27017 );
-			db = mongoClient.getDB( "mobileapi" );
+			mongoClient = new MongoClient(_server , _port );
+			db = mongoClient.getDB( _collection );
 		} catch (UnknownHostException e)
 		{
 			// TODO Auto-generated catch block
@@ -31,14 +42,11 @@ public class DBFactory {
 		{
 			e.printStackTrace();
 		}
-		
-		// or, to connect to a replica set, with auto-discovery of the primary, supply a seed list of members
-		/*
-		MongoClient mongoClient = new MongoClient(Arrays.asList(new ServerAddress("localhost", 27017),
-		                                      new ServerAddress("localhost", 27018),
-		                                      new ServerAddress("localhost", 27019)));
-		 */
-			
 		return db;
+	}
+	
+	public static void shutdown()
+	{
+		
 	}
 }
