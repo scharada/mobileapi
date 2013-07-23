@@ -8,24 +8,24 @@ Installation for a single Server configuration:
 
  * OS - Test on Ubuntu (Amazon EC2) and on Windows 8.
 
- * mongodb 
+ * Mongodb 
 
- * redis
+ * Redis
 
- * java7
+ * Java7
 
- * zookeper
+ * Zookeper
 
- * glassfish 4
+ * Glassfish 4
 
- * copy jars to glassfish domain1 lib/ext
+ * copy jars to Glassfish domain1 lib/ext
 
  * create config files for Linux: /etc/mobileapi.conf and /etc/mobileapi4J.xml or Windows: C:\mobileapi.conf and C:\mobileapi4J.xml
 
  * create queues (script TODO)
 
- * populate zookeeper (script TODO)
+ * populate Zookeeper (script TODO)
 
- * Deploy mobileapi.ear
+ * Deploy mobileapi.ear on Glassfish
 
  * Start app.js (sudo node app.js)
