@@ -1,0 +1,23 @@
+#summary Setup Runtime Environment
+
+= Setup =
+
+ * ubuntu
+
+ * mongodb
+
+ * redis
+
+ * java7
+
+ * zookeper
+
+ * glassfish 4
+
+ * copy libraries to lib/ext
+
+ * config files in /etc
+
+ * create queues
+
+ * populate zookeeper
