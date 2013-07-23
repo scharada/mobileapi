@@ -14,12 +14,10 @@ import org.mobileapi.server.entity.*;
 import org.mobileapi.entity.Key;
 
 public class UserService {
-	DBFactory factory = new DBFactory();
-
 	
 	public boolean exists(String email)
 	{
-		DBCollection coll = factory.get().getCollection("user");
+		DBCollection coll = DBFactory.get().getCollection("user");
 		BasicDBObject query = new BasicDBObject("email", email);
 		DBCursor cursor = coll.find(query);
 		boolean exists = cursor.count() > 0;
@@ -29,7 +27,7 @@ public class UserService {
 	
 	public void insert(User user)
 	{
-		DBCollection coll = factory.get().getCollection("user");
+		DBCollection coll = DBFactory.get().getCollection("user");
 		BasicDBObject doc = new BasicDBObject("email", user.getEmail()).
 				append(Key.USERID, user.getUserId()).
 				append("givenName", user.getGivenName()).
