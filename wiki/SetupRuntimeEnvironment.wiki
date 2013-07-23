@@ -6,7 +6,7 @@ Check our [Links] page for download links.
 
 Installation for a single Server configuration:
 
- * OS - Test on Ubuntu (Amazon EC2) and on Windows 8.
+ * OS - Tested on Ubuntu (Amazon EC2) and on Windows 8.
 
  * Mongodb 
 
