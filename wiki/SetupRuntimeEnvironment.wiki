@@ -2,9 +2,13 @@
 
 = Setup =
 
- * ubuntu
+Check our links page for download [links].
 
- * mongodb
+Install:
+
+ * OS - Test on Ubuntu (Amazon EC2) and on Windows 8.
+
+ * mongodb 
 
  * redis
 
@@ -14,9 +18,11 @@
 
  * glassfish 4
 
- * copy libraries to lib/ext
+ * copy jars to glassfish domain1 lib/ext
 
- * config files in /etc
+ * create config files in /etc/mobileapi.conf and /etc/mobileapi4J.xml
+  or C:\mobileapi.conf and C:\mobileapi4J.xml
+
 
  * create queues
 
