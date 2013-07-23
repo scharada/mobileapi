@@ -2,7 +2,7 @@
 
 = Setup =
 
-Check our links page for download [links].
+Check our links page for download [Links].
 
 Install:
 
