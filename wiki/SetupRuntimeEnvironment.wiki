@@ -20,8 +20,7 @@ Installation for a single Server configuration:
 
  * copy jars to glassfish domain1 lib/ext
 
- * create config files in /etc/mobileapi.conf and /etc/mobileapi4J.xml
-  or C:\mobileapi.conf and C:\mobileapi4J.xml
+ * create config files for Linux: /etc/mobileapi.conf and /etc/mobileapi4J.xml or Windows: C:\mobileapi.conf and C:\mobileapi4J.xml
 
  * create queues (script TODO)
 
