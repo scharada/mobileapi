@@ -2,9 +2,9 @@
 
 = Setup =
 
-Check our links page for download [Links].
+Check our [Links] page for download links.
 
-Install:
+Installation for a single Server configuration:
 
  * OS - Test on Ubuntu (Amazon EC2) and on Windows 8.
 
@@ -23,7 +23,10 @@ Install:
  * create config files in /etc/mobileapi.conf and /etc/mobileapi4J.xml
   or C:\mobileapi.conf and C:\mobileapi4J.xml
 
+ * create queues (script TODO)
 
- * create queues
+ * populate zookeeper (script TODO)
 
- * populate zookeeper
+ * Deploy mobileapi.ear
+
+ * Start app.js (sudo node app.js)
