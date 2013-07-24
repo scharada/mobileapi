@@ -11,10 +11,12 @@ import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.inject.Named;
 
+import org.apache.log4j.Logger;
 import org.apache.zookeeper.*;
 import org.apache.zookeeper.Watcher.Event.EventType;
 import org.apache.zookeeper.data.*;
 import org.apache.zookeeper.CreateMode;
+import org.mobileapi.server.api.service.Factory;
 
 /*
  * Wrapper for  Zookeeper
@@ -23,6 +25,8 @@ import org.apache.zookeeper.CreateMode;
 
 public class Zoo {
 
+	private Logger L = Logger.getLogger(Zoo.class);
+	
 	public static final String UPDATED = "/updated";
 	public static final String BROKER0QUEUE = "/broker0/queue";
 	public static final String GATE0QUEUE = "/gate0/queue";
@@ -45,13 +49,30 @@ public class Zoo {
 		throw new Exception("No zookeeper path for " + path);
 	}
 	
+	public void delete(String path) {
+		try {
+			_ZooKeeper.delete(path, -1);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		} catch (KeeperException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public void set(String path, String val) {
 
 		byte ptext[] =  val.getBytes();
 		try {
 			Stat stat = _ZooKeeper.exists(path, false);
-			int version = stat.getCversion() + 1;
-			_ZooKeeper.setData(path, ptext, version);
+			if(stat != null)
+			{
+
+			}
+			else
+			{
+				createNode( path);
+			}
+			_ZooKeeper.setData(path, ptext, -1);
 		} catch (KeeperException e) {
 			e.printStackTrace();
 		} catch (InterruptedException e) {
@@ -63,9 +84,7 @@ public class Zoo {
 
 		byte ptext[] =  d.toString().getBytes();
 		try {
-			Stat stat = _ZooKeeper.exists(path, false);
-			int version = stat.getCversion() + 1;
-			_ZooKeeper.setData(path, ptext, version);
+			_ZooKeeper.setData(path, ptext, -1);
 		} catch (KeeperException e) {
 			e.printStackTrace();
 		} catch (InterruptedException e) {
@@ -73,16 +92,37 @@ public class Zoo {
 		}
 	}
 	
-	public boolean createNode(String path)
+	public List<String> list(String path)
 	{
 		try {
-			Stat stat = _ZooKeeper.exists(path, false);
-			if(stat !=null)
+			return _ZooKeeper.getChildren(path, false);
+		} catch (KeeperException e) {
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return new ArrayList<String>();
+	}
+	
+	public boolean createNode(String path)
+	{
+		String[] parts = path.split("/");
+		try {
+			List<ACL> acl = new ArrayList<ACL>(ZooDefs.Ids.OPEN_ACL_UNSAFE );	
+			String newPath = "";
+			for(int i=1; i < parts.length;i++)
 			{
-				return true;
+				newPath += "/" +  parts[i];
+				Stat stat = _ZooKeeper.exists(newPath, false);
+				if(stat !=null)
+				{
+					continue;
+				}
+				else
+				{
+					_ZooKeeper.create(newPath, new byte[]{'-'}, acl, CreateMode.PERSISTENT );
+				}
 			}
-			List<ACL> acl = new ArrayList<ACL>(ZooDefs.Ids.OPEN_ACL_UNSAFE );
-			_ZooKeeper.create(path, new byte[0], acl, CreateMode.PERSISTENT );
 			return true;
 		} catch (KeeperException e) {
 			e.printStackTrace();
@@ -118,8 +158,8 @@ public class Zoo {
 	}
 
 	// TODO 
-	public void process(WatchedEvent event) {
-
+	public void process(WatchedEvent event)
+	{
 		System.out.println("WatchedEvent " + event);
 	}
 
