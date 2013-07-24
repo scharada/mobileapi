@@ -22,7 +22,7 @@ http://www.rabbitmq.com/
 
 http://www.rabbitmq.com/java-client.html
 
-https://nodejsmodules.org/pkg/rabbit.js
+https://github.com/squaremo/amqp.node
 
 == WebClient Libraries ==
 http://angularjs.org/
