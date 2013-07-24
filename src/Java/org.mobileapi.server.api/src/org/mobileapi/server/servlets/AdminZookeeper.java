@@ -1,7 +1,6 @@
 package org.mobileapi.server.servlets;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -21,6 +20,9 @@ import org.mobileapi.server.api.service.Factory;
 
 /**
  * Servlet implementation class AdminZookeeper
+ * Used by Superadmin to configure Zookeeper
+ * Class should have minimum dependencies so can be used at install time befor anything else is configured
+ * Preconditions: Superadmin and Zookeeper are configured in /etc/mobileapi.conf and Glassfish is started
  */
 @WebServlet(description = "Configure Zookeeper", urlPatterns = { "/AdminZookeeper" })
 public class AdminZookeeper extends HttpServlet {
@@ -159,13 +161,17 @@ public class AdminZookeeper extends HttpServlet {
 				}
 				msg = "Saved to Zookeper " + new Date();
 			}
+			// ************************************************
 			else if(cmd.equals("logout"))
+			// ************************************************
 			{
 				authenticated = false;
 				pwd = "";
 				username ="";
 			}
+			// ************************************************
 			else if(cmd.equals("remove"))
+			// ************************************************
 			{
 				String[] boxes = request.getParameterValues("cbx"); 
 				if(boxes==null || boxes.length==0)
@@ -182,7 +188,9 @@ public class AdminZookeeper extends HttpServlet {
 					msg = "Removed items " + new Date();
 				}
 			}
+			// ************************************************
 			else if(cmd.equals("update"))
+			// ************************************************
 			{
 				String[] fields = request.getParameterValues("field"); 
 				Iterator<String> it = conf.keySet().iterator();
@@ -204,7 +212,9 @@ public class AdminZookeeper extends HttpServlet {
 				}
 				msg = "Updated " + new Date();
 			}
-			else if(cmd.equals("set default"))
+			// ************************************************
+			else if(cmd.equals("set single server default"))
+		    // ************************************************
 			{
 				setDefault();
 				msg = "Default set " + new Date();
@@ -221,7 +231,6 @@ public class AdminZookeeper extends HttpServlet {
 				String key = it.next();
 				sb.append(getLine(key, conf.get(key)));
 			}
-	
 			html = String.format(html, sb.toString());
 		}
 		else
@@ -231,6 +240,42 @@ public class AdminZookeeper extends HttpServlet {
 		response.getWriter().println(html);
 	}
 	
+	private String getLine(String key, String val)
+	{
+		return "<tr><td bgcolor=#EEEEEE><input name=field type=text size=50 value='" + val + "'/></td><td bgcolor=#EEEEEE><b>" + key + "</b></td><td><input type=checkbox name=cbx value='" + key + "'/></td></tr>";
+	}
+	
+	private String getTemplate(boolean authenticated, String user, String pwd, String msg)
+	{
+		StringBuffer sb = new StringBuffer();
+		sb.append("<head><title>mobileAPI Admin</title></head><body bgcolor=#DDDDDDD font='Arial'><form method=post><table  bordercolor=#6666FF cellspacing=0 cellpadding=0 border=1>");
+		
+		sb.append("<tr><td bgcolor=#6666FF colspan=3><h1><font color=white>mobileAPI Administration</font></h1></td></tr><tr><td bgcolor=#6666FF colspan=3><h2><font color=white>Zookeeper Configuration</font></h2></td></tr>");
+		sb.append("<tr><td bgcolor #6666FF colspan=3><input placeholder='username' type=text size=40");
+		sb.append(" value='" + user +"' ");
+		sb.append("name=username /> <input placeholder='password' type=password size=40");
+		sb.append(" value='" + pwd + "' name=pwd><input type='submit' name='btn' value=");
+		if(authenticated)
+		{
+			sb.append("'logout'");
+			sb.append("/></td></tr>");
+			sb.append(" %s ");
+			sb.append("<tr><td bgcolor=#EEEEEE><input type=text size=50 name=newVal /></td><td bgcolor=#EEEEEE><input type=text name=newKey /></td><td></td></tr>");
+			sb.append("<tr bgcolor=#999999><td bgcolor=#999999><input type=submit style='border-color:#FF0000;border-style:solid;' value='save to Zookeeper' name=btn />&nbsp;&nbsp;<input type=submit value='load from Zookeeper' name=btn />&nbsp;&nbsp;<input type=submit value=update name=btn /></td><td bgcolor=#999999><input style='border-color:#FF0000;border-style:solid;' type=submit name=btn value='set single server default' /></td><td bgcolor=#999999><input  style='border-color:#FF0000;border-style:solid;' type=submit value=remove name=btn /></td></tr></table>");
+						
+		}
+		else
+		{
+			sb.append("'logon'");
+			sb.append("/></td></tr>");
+		}
+		sb.append("<div><font size=2 color=blue>" +  msg + "</div></form></body>");
+		sb.append("</form></body>");
+
+		return sb.toString();
+	}
+	
+	// configuration default for a single server setup
 	private void setDefault()
 	{
 		conf.clear();
@@ -263,42 +308,4 @@ public class AdminZookeeper extends HttpServlet {
 		conf.put("/gate/0/url","https://gate.mobileapi.org"); 
 		conf.put("/gate/0/active","true");
 	}
-	
-	public String getLine(String key, String val)
-	{
-		return "<tr><td bgcolor=#EEEEEE><input name=field type=text size=50 value='" + val + "'/></td><td bgcolor=#EEEEEE><b>" + key + "</b></td><td><input type=checkbox name=cbx value='" + key + "'/></td></tr>";
-	}
-	
-	public String getTemplate(boolean authenticated, String user, String pwd, String msg)
-	{
-		StringBuffer sb = new StringBuffer();
-		sb.append("<head><title>mobileAPI Admin</title></head><body bgcolor=#DDDDDDD font='Arial'><form method=post><table  bordercolor=#6666FF cellspacing=0 cellpadding=0 border=1>");
-		
-		sb.append("<tr><td bgcolor=#6666FF colspan=3><h1><font color=white>mobileAPI Administration</font></h1></td></tr><tr><td bgcolor=#6666FF colspan=3><h2><font color=white>Zookeeper Configuration</font></h2></td></tr>");
-		sb.append("<tr><td bgcolor #6666FF colspan=3><input placeholder='username' type=text size=40");
-		sb.append(" value='" + user +"' ");
-		sb.append("name=username /> <input placeholder='password' type=password size=40");
-		sb.append(" value='" + pwd + "' name=pwd><input type='submit' name='btn' value=");
-		if(authenticated)
-		{
-			sb.append("'logout'");
-			sb.append("/></td></tr>");
-			sb.append(" %s ");
-			sb.append("<tr><td bgcolor=#EEEEEE><input type=text size=50 name=newVal /></td><td bgcolor=#EEEEEE><input type=text name=newKey /></td><td></td></tr>");
-			sb.append("<tr bgcolor=#999999><td bgcolor=#999999><input type=submit style='border-color:#FF0000;border-style:solid;' value='save to Zookeeper' name=btn />&nbsp;&nbsp;<input type=submit value='load from Zookeeper' name=btn />&nbsp;&nbsp;<input type=submit value=update name=btn /></td><td bgcolor=#999999><input style='border-color:#FF0000;border-style:solid;' type=submit name=btn value='set default' /></td><td bgcolor=#999999><input  style='border-color:#FF0000;border-style:solid;' type=submit value=remove name=btn /></td></tr></table>");
-						
-		}
-		else
-		{
-			sb.append("'logon'");
-			sb.append("/></td></tr>");
-		}
-		sb.append("<div><font size=2 color=blue>" +  msg + "</div></form></body>");
-		sb.append("</form></body>");
-
-		return sb.toString();
-	}
-	
-	
-
 }
