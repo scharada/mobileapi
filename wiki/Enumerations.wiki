@@ -11,11 +11,13 @@
 || 6 || MSG || 
 || 7 || GPS || 
 || 8 || PING || 
-|| 9 || ECHO || 
-|| 10 || LOG || 
-|| 11 || UPDATETOKEN || 
-|| 12 || CHANGEGATEWAY || 
-|| 13 || LOGOFF || 
+|| 9 || PONG || 
+|| 10 || ECHO || 
+|| 11 || LOGDEBUG || 
+|| 12 || LOGERROR || 
+|| 13 || UPDATETOKEN || 
+|| 14 || CHANGEGATEWAY || 
+|| 15 || LOGOFF || 
 
 ||  *EnumEncoding* || 
 || 0 || NONE || 
