@@ -5,14 +5,17 @@
 || 0 || LOGON || 
 || 1|| ACK || 
 || 2|| NACK || 
-|| 3 || MSG || 
-|| 4 || GPS || 
-|| 5 || PING || 
-|| 6 || ECHO || 
-|| 7 || LOG || 
-|| 8 || UPDATETOKEN || 
-|| 9 || CHANGEGATEWAY || 
-|| 10 || LOGOFF || 
+|| 3 || STARTSEQ || 
+|| 4 || ENDSEQ || 
+|| 5 || TERMINATESEQ || 
+|| 6 || MSG || 
+|| 7 || GPS || 
+|| 8 || PING || 
+|| 9 || ECHO || 
+|| 10 || LOG || 
+|| 11 || UPDATETOKEN || 
+|| 12 || CHANGEGATEWAY || 
+|| 13 || LOGOFF || 
 
 ||  *EnumEncoding* || 
 || 0 || NONE || 
