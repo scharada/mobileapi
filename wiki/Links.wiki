@@ -36,6 +36,8 @@ https://github.com/square/SocketRocket
 
 http://websocket4net.codeplex.com/downloads/get/454203
 
+http://www.asp.net/signalr
+
 
 == Parser ==
 http://xalan.apache.org/
